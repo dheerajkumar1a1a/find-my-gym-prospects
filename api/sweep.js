@@ -1,5 +1,5 @@
 // api/sweep.js — the scheduled job. This is the "runs without you" proof.
-// Vercel Cron hits it at 01:30 UTC = 07:00 IST, daily.
+// Vercel Cron hits it at 07:00 UTC Monday = 12:30 IST, weekly.
 import { runRadar, toTelegram } from '../lib/radar.js';
 import { sendTelegram } from '../lib/telegram.js';
 

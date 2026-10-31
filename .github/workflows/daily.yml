@@ -2,8 +2,8 @@ name: daily sweep
 
 on:
   schedule:
-    # 01:30 UTC = 07:00 IST
-    - cron: '30 1 * * *'
+    # 07:00 UTC Monday = 12:30 IST Monday, weekly.
+    - cron: '0 7 * * 1'
   workflow_dispatch:
 
 permissions:

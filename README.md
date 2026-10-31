@@ -41,7 +41,7 @@ Every run produces a **run log**: what was scanned, what was kept, and — equal
 |---|---|
 | `GET /api/radar` | full run log (the wall reads this) |
 | `GET /api/run?notify=1` | force a sweep and push it to Telegram |
-| `GET /api/sweep` | the cron target, 07:00 IST daily (`30 1 * * *` UTC) |
+| `GET /api/sweep` | the cron target, Mondays 12:30 IST (`0 7 * * 1` UTC) |
 | `GET /api/ok` | health check + whether Telegram is configured |
 
 ## Run it locally (no login, no build)
@@ -65,7 +65,7 @@ Then set two environment variables in the Vercel project:
 | `TELEGRAM_CHAT_ID` | message your new bot once, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id` |
 | `RADAR_KEY` *(optional)* | if set, callers must send header `x-radar-key` |
 
-`vercel.json` already schedules the sweep at `30 1 * * *` UTC = **07:00 IST**. Vercel Cron fires it
+`vercel.json` already schedules the sweep at `0 7 * * 1` UTC = **12:30 IST every Monday**. Vercel Cron fires it
 with no hands on it, which is the entire point of the automation track.
 
 ## Sources

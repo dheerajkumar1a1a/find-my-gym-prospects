@@ -5,6 +5,6 @@ export default async function handler(req, res) {
   res.status(200).json({
     ok: true,
     telegram: telegramConfigured(),
-    cron: '30 1 * * * UTC (07:00 IST daily)',
+    cron: '0 7 * * 1 UTC (12:30 IST, Mondays)',
   });
 }

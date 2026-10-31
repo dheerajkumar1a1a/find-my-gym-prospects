@@ -16,7 +16,7 @@ inferences. Anything not verified is marked as unverified.
 
 A daily radar that finds gyms in Pune showing a **dated, sourced business change** (opening,
 expansion, hiring, funding, partnership), attaches the evidence, maps it to one of the seller's
-services, and pushes a digest to Telegram at 07:00 IST with no human involvement.
+services, and pushes a digest to Telegram every Monday at 12:30 IST with no human involvement.
 
 It has two jobs at once:
 
@@ -48,14 +48,14 @@ sources ──► extract ──► resolve ──► disqualify ──► score
 
 Two runtimes share one pipeline:
 
-- **GitHub Actions** (`sweep.mjs`) — the real one. Cron `30 1 * * *` UTC = 07:00 IST. Writes
+- **GitHub Actions** (`sweep.mjs`) — the real one. Cron `0 7 * * 1` UTC = Mondays 12:30 IST. Writes
   `runs/latest.json`, `runs/YYYY-MM-DD.json`, `runs/index.json`, sends Telegram, commits the
   run log back to `main`, which triggers a Pages rebuild.
 - **Local / Vercel** (`serve.mjs`, `api/*.js`) — the same pipeline behind HTTP, for development.
 
 The wall reads `/api/radar` if it answers, otherwise falls back to `./runs/latest.json`. One
 HTML file works on Pages, on Vercel and on localhost. In static mode it disables the "Run
-sweep" button and shows "Scheduled 07:00 IST" instead, because pretending a static page can
+sweep" button and shows "Scheduled Mon 12:30 IST" instead, because pretending a static page can
 trigger a sweep would be a lie.
 
 ### File map
@@ -371,7 +371,7 @@ Answer these in order of usefulness to the owner, not in order of elegance:
 - `SCOPE.windowDays = 365` is too generous for an urgency tool (§7.11).
 - The scheduled cron has **not** been observed firing on its own. The workflow was triggered
   manually via `workflow_dispatch` and by API dispatch; both succeeded. The first unattended
-  cron is 01 Nov 2026, 01:30 UTC. **This is the one claim in the demo resting on documentation
+  cron is Monday 2 Nov 2026, 07:00 UTC. **This is the one claim in the demo resting on documentation
   rather than evidence.**
 
 ---
