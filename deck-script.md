@@ -1,16 +1,15 @@
 # Gym Radar — 5 minute demo script
 
 Open `deck.html`, press **F**. Arrow keys move. Click the right third to advance if the
-clicker fails. Total spoken length ~700 words at a normal pace — **do not add to it**, the
-timings below have no slack.
+clicker fails. Everything you need is inside the deck — **do not switch windows**. Total
+spoken length ~670 words at a normal pace; the timings below have no slack.
 
 ---
 
 ## Before you walk up
 
-- [ ] Phone in hand, **unlocked**, Telegram open on the Gym Radar message (message 5)
-- [ ] `deck.html` open and fullscreened
-- [ ] Wall open in a second tab: https://dheerajkumar1a1a.github.io/find-my-gym-prospects/
+- [ ] `deck.html` open and fullscreened — **`F`**, then arrow through it once
+- [ ] Laptop volume off, notifications off, phone face-down
 - [ ] Water. Breathe. You have one number to remember: **63 in, 3 out, 60 thrown away.**
 
 ---
@@ -57,8 +56,7 @@ timings below have no slack.
 
 ## 1:35 — Slide 5 · The AI caught my mistake (30s)
 
-> "Then a model reads the survivors. And on the first real run, it caught a mistake my rules
-> made.
+> "Then a model reads them. And on the first real run, it caught a mistake my rules made.
 >
 > SportsSkill. My rules saw 'fitness centre' and scored it a five — call this week. The model
 > read the same text and said: this is a sports-tech platform. Adjacent. Verify before you
@@ -73,41 +71,57 @@ timings below have no slack.
 
 > "Here's the slide I'd show a judge first.
 >
-> Sixty-three items in. Three opportunities. Sixty thrown away — with a reason attached.
+> Sixty-three items in. Three opportunities. Sixty thrown away — and this is the breakdown of
+> why. No event, twenty-five. Not a business event, eleven. Outside Pune, nine. Duplicate,
+> five.
 >
 > Every lead tool shows you what it found. That's half the work. The other half is what it
-> refused, and why. Anyone can audit my judgment in ten seconds. So can I, next Monday."
+> refused. Anyone can audit my judgment in ten seconds. So can I, next Monday."
 
-## 2:30 — Slide 7 · Delivery (25s)
-
-*Hold up the phone here.*
+## 2:30 — Slide 7 · Delivery (20s)
 
 > "Monday, 12:30. Nobody touches it.
 >
-> GitHub Actions fires at 07:00 UTC. Twenty seconds later the sweep is done and this is on my
-> phone — source link, the verdict, one next action.
+> GitHub Actions fires at 07:00 UTC. Twenty seconds later the sweep is done, the digest is
+> sent, and the run log commits itself back to the repo."
+
+## 2:50 — Slide 8 · What lands on my phone (25s)
+
+> "This is the message. Three cards, not a spreadsheet.
+>
+> Each one carries the date, the source, the AI's verdict, one next action — and the one thing
+> still unknown, which here is member capacity and whether they already have a marketing stack.
 >
 > The message is the product. If it doesn't arrive on a phone, the automation isn't real."
 
-## 2:55 — Slide 8 · What it changes for sales (30s)
+## 3:15 — Slide 9 · The receipt (20s)
+
+> "And this is why you should believe that.
+>
+> Top half is the config: one line, `cron: '0 7 star star 1'` — Monday, 07:00 UTC. Bottom half
+> is the job log from the last run: sixty-three scanned, three opportunities, sixty rejected,
+> sixteen seconds, and `telegram: sent`, message five.
+>
+> Not a claim. A log line."
+
+## 3:35 — Slide 10 · What it changes for sales (25s)
 
 > "So what does a rep do differently?
 >
-> Monday 12:30 the list lands — three cards, not a spreadsheet. Tuesday, two calls instead of
-> twenty, and both open with 'you inaugurated on the 21st' instead of 'do you need marketing'.
-> Wednesday, the objection is already on the card: budget unknown, decision-maker unknown,
-> existing agency unknown.
+> Monday the list lands — three cards. Tuesday, two calls instead of twenty, and both open with
+> 'you inaugurated on the 21st' instead of 'do you need marketing'. Wednesday, the objection is
+> already on the card: budget unknown, decision-maker unknown, existing agency unknown.
 >
 > And by Friday the rejections feed targeting. If everything I find is a franchise, my ICP is
 > wrong — and the log tells me that."
 
-## 3:25 — Slide 9 · What I have not proven (30s)
+## 4:00 — Slide 11 · What I have not proven (30s)
 
 *Slow down. This is the credibility slide.*
 
 > "Three claims. Only two are earned.
 >
-> The pipeline works — five runs, delivered digests, committed logs. The AI step works — three
+> The pipeline works — four runs, all green, three delivered digests. The AI step works — three
 > of three assessed, twenty seconds, validated output.
 >
 > The third one: the unattended cron has never fired. Every run so far, I triggered by hand.
@@ -116,23 +130,19 @@ timings below have no slack.
 > And coverage is honest too: press only. The gyms I can actually sell to have no press
 > footprint. That's the next build, not a nice-to-have."
 
-## 3:55 — Slide 10 · Future scope (30s)
+## 4:30 — Slide 12 · Future scope (20s)
 
 > "Next, in order. One: a Places proximity sweep over Baner, Balewadi, Aundh, Wakad — review
-> count as a proxy for 'new', no website as the digital gap. That turns discovery into
-> qualification.
+> count as a proxy for 'new', no website as the digital gap.
 >
-> Two: persistence, so Monday says 'new this week' instead of re-sending the same three gyms.
-> Three: CRM write-back, evidence attached to the deal. Four: log what was called and what
-> closed — and then the scoring stops being a rubric."
+> Two: persistence, so Monday says 'new this week'. Three: CRM write-back with the evidence
+> attached. Four: log what was called and what closed — then the scoring stops being a rubric."
 
-## 4:25 — Slide 11 · Close (35s)
+## 4:50 — Slide 13 · Close (10s)
 
 > "Anyone can generate a list. The hard part is earning the right to skip it.
 >
-> Gym Radar. Pune. Weekly at 12:30. Repo and the live wall are public — including a review
-> document that lists every weakness I know about.
->
+> Repo and wall are public — including a document listing every weakness I know about.
 > Thank you."
 
 ---
@@ -163,15 +173,22 @@ timings below have no slack.
 > "The rules are niche-specific — franchise list, localities, fitness vocabulary. The shape is
 > generic. Swapping the vocabulary and the offer map is the whole port."
 
+**"Show me the code."**
+> "Two files. `lib/radar.js` is the rules and the scoring — about twenty-five lines of regex for
+> the eleven disqualifications. `lib/ai.js` is the model call and a validator that throws away
+> any response missing a required field. Happy to walk you through either."
+
 ---
 
 ## Do not say
 
-- ❌ "It runs every day at 7am" — it's **weekly, Monday 12:30**.
+- ❌ "It runs every day at 7am" — it's **weekly, Monday 12:30 IST**.
 - ❌ "It finds all the gyms in Pune" — it finds **press-visible fitness openings**.
 - ❌ "The AI scores the leads" — it **annotates** them; the rules score.
 - ❌ "Stage C means don't contact" — say **"qualification pending"**; the label is a heuristic
   from press adjectives, not a fact about their budget.
+- ❌ "The cron is running every Monday" — it has **never fired on schedule yet**. Say it once,
+  on slide 11, and don't contradict yourself earlier.
 - ❌ Any conversion or revenue number. You don't have one yet, and inventing it is the only
   thing in this deck that could sink you.
 
@@ -180,6 +197,8 @@ timings below have no slack.
 ## Timing discipline
 
 If you're running long, cut in this order:
-1. Slide 4 (rules) — compress to one sentence: "eleven rules, all recorded."
-2. Slide 10 (future) — name the Places sweep only.
-3. Never cut slide 6 or slide 9. The rejection log and the unproven claim **are** the talk.
+1. Slide 12 (future) — name the Places sweep only, drop 02–04.
+2. Slide 4 (rules) — compress to one sentence: "eleven rules, and here's the breakdown."
+3. Slide 9 (receipt) — read only `telegram: sent (message 5)` and move on.
+4. Never cut slide 6 or slide 11. The rejection breakdown and the unproven claim **are** the
+   talk.

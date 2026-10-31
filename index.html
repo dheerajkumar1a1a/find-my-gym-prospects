@@ -265,7 +265,7 @@ function setMode(){
   if (STATIC) {
     b.disabled = true;
     b.textContent = 'Scheduled Mon 12:30 IST';
-    b.title = 'Runs daily via GitHub Actions. This page reads the committed run log.';
+    b.title = 'Runs weekly, Monday 12:30 IST, via GitHub Actions. This page reads the committed run log.';
     $('#btnSend').style.display = 'none';
   }
 }
@@ -278,7 +278,7 @@ async function load(force){
   } catch (e) {
     $('#cards').innerHTML = `<div class="empty">Could not load a run: ${esc(e.message)}<br><br>
       Locally, run <code>node serve.mjs</code>. On GitHub Pages the wall reads
-      <code>runs/latest.json</code>, written by the daily sweep.</div>`;
+      <code>runs/latest.json</code>, written by the weekly sweep.</div>`;
   }
 }
 
