@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Radar · 5 minute demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8E7; --ink:#14110F; --red:#E3262E; --orange:#FF8A3D;
+  --mint:#7CF0C5; --yellow:#FFE14D; --grey:#6B6259; --line:rgba(20,17,15,.14);
+  --sans:'Bricolage Grotesque',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--cream); color:var(--ink); font-family:var(--sans);
+  overflow:hidden; -webkit-font-smoothing:antialiased;
+}
+/* ---------- chrome ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;height:3px;background:var(--line);z-index:50}
+.bar i{display:block;height:100%;background:var(--red);width:0;transition:width .25s ease}
+.count{
+  position:fixed;right:26px;bottom:18px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;color:var(--grey);z-index:50;
+}
+.brand{
+  position:fixed;left:26px;bottom:18px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;color:var(--grey);z-index:50;
+}
+.hint{
+  position:fixed;right:26px;top:20px;font-family:var(--mono);font-size:10px;
+  letter-spacing:.14em;color:var(--grey);opacity:.55;z-index:50;
+}
+/* ---------- slides ---------- */
+.slide{
+  position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:74px 88px 96px;opacity:0;
+}
+.slide.on{display:flex;opacity:1;animation:in .32s ease both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.kicker{
+  font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--red);margin-bottom:26px;display:flex;align-items:center;gap:12px;
+}
+.kicker:before{content:"";width:34px;height:1px;background:var(--red);display:block}
+
+h1{font-size:clamp(42px,6.4vw,86px);line-height:.94;letter-spacing:-.035em;font-weight:800}
+h1 em{font-style:normal;color:var(--red)}
+h2{font-size:clamp(30px,4.1vw,54px);line-height:1.02;letter-spacing:-.03em;font-weight:800;max-width:19ch}
+h2 em{font-style:normal;color:var(--red)}
+p.lead{font-size:clamp(17px,1.65vw,23px);line-height:1.5;color:var(--grey);max-width:60ch;margin-top:26px}
+p.lead b{color:var(--ink);font-weight:600}
+
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.two.wide{grid-template-columns:1fr 1fr}
+
+/* ---------- pieces ---------- */
+.pill{
+  display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.08em;color:var(--grey);background:rgba(255,255,255,.45);
+}
+.pill b{color:var(--ink);font-weight:600}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);flex:none}
+.dot.red{background:var(--red)}
+
+.tally{display:flex;gap:56px;margin-top:34px;flex-wrap:wrap}
+.tally .n{font-family:var(--mono);font-size:clamp(46px,6vw,78px);font-weight:600;line-height:1;letter-spacing:-.04em}
+.tally .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:10px}
+.tally .red .n{color:var(--red)}
+.tally .mint .n{color:#1f9d76}
+
+.flow{display:flex;align-items:stretch;gap:0;margin-top:34px;flex-wrap:wrap}
+.step{
+  border:1px solid var(--line);border-right:none;padding:16px 20px;background:rgba(255,255,255,.5);
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;display:flex;flex-direction:column;gap:7px;
+}
+.step:first-child{border-radius:10px 0 0 10px}
+.step:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0;background:var(--ink);color:var(--cream)}
+.step span{color:var(--grey);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.step:last-child span{color:var(--yellow)}
+
+.rows{display:flex;flex-direction:column;gap:0;margin-top:30px;border-top:1px solid var(--line)}
+.row{display:flex;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row .num{font-family:var(--mono);font-size:13px;color:var(--red);min-width:40px;font-weight:600}
+.row .what{font-size:17px;font-weight:600;min-width:250px}
+.row .why{font-size:15px;color:var(--grey);line-height:1.45}
+
+.card-demo{
+  border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;
+  background:rgba(255,255,255,.62);padding:20px 22px;margin-top:8px;
+}
+.card-demo .who{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.card-demo .meta{font-family:var(--mono);font-size:11px;color:var(--grey);letter-spacing:.08em;margin-top:6px}
+.card-demo .quote{font-size:14.5px;line-height:1.5;margin-top:14px;color:var(--ink)}
+.card-demo .ai{
+  margin-top:14px;border:1px solid #1f9d76;border-radius:8px;padding:12px 14px;
+  background:rgba(124,240,197,.18);font-size:14px;line-height:1.5;
+}
+.card-demo .ai .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#1f9d76;display:block;margin-bottom:6px}
+
+.big-quote{font-size:clamp(26px,3.4vw,44px);line-height:1.18;letter-spacing:-.025em;font-weight:600;max-width:26ch}
+.big-quote em{font-style:normal;color:var(--red)}
+
+.unproven{display:flex;flex-direction:column;gap:16px;margin-top:26px;max-width:74ch}
+.unproven div{display:flex;gap:14px;font-size:16.5px;line-height:1.5;color:var(--grey)}
+.unproven div b{color:var(--ink);font-weight:600}
+.tick{font-family:var(--mono);color:var(--red);font-weight:600;flex:none}
+
+.note{
+  position:absolute;left:88px;bottom:66px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.1em;color:var(--grey);opacity:.8;
+}
+@media print{
+  body{overflow:visible}
+  .slide{display:flex!important;opacity:1!important;position:relative;inset:auto;height:100vh;page-break-after:always}
+  .bar,.count,.hint{display:none}
+}
+@media (max-width:900px){
+  .slide{padding:44px 30px 80px}
+  .two{grid-template-columns:1fr;gap:30px}
+  .note{left:30px;bottom:52px}
+}
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide on">
+  <div class="kicker">Gym Growth OS · Pune</div>
+  <h1>I didn't build a lead tool.<br>I built the thing that says <em>don't call them</em>.</h1>
+  <p class="lead">A weekly radar that finds gyms in Pune showing a dated, sourced business change — and refuses to rank the ones I can't sell to yet.</p>
+  <div class="note">0:00 · 15s</div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="kicker">The problem</div>
+  <div class="two">
+    <div>
+      <h2>Leads arrive <em>late</em>. Signals arrive <em>early</em>.</h2>
+      <p class="lead">By the time a gym is in a database, it's a cold call. The moment it <b>opens a flagship</b>, <b>adds a branch</b> or <b>hires trainers</b> — that's the week it needs marketing, and nobody is watching.</p>
+    </div>
+    <div>
+      <div class="pill" style="margin-bottom:14px"><span class="dot"></span><b>73</b> gyms on one road</div>
+      <div class="pill" style="margin-bottom:14px"><span class="dot red"></span><b>0</b> signal of who to call first</div>
+      <p class="lead" style="font-size:16px">The data isn't the problem. The judgment is.</p>
+    </div>
+  </div>
+  <div class="note">0:15 · 25s</div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="kicker">What it does</div>
+  <h2>Six sources in. Three cards out. <em>Sixty rejections, all explained.</em></h2>
+  <div class="flow">
+    <div class="step"><span>1 · fetch</span>Bing News · Google News<br>Punekar · Pune Mirror</div>
+    <div class="step"><span>2 · extract</span>business name<br>locality · event</div>
+    <div class="step"><span>3 · reject</span>11 rules<br>reason recorded</div>
+    <div class="step"><span>4 · assess</span>AI on survivors<br>only</div>
+    <div class="step"><span>5 · deliver</span>Telegram<br>Monday 12:30</div>
+  </div>
+  <p class="lead">Rule-based on purpose. The pipeline cannot die on a rate limit, and every rejection has a reason I can point at.</p>
+  <div class="note">0:40 · 30s</div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="kicker">The judgment — part 1</div>
+  <h2>The rules decide <em>who survives</em>.</h2>
+  <div class="rows">
+    <div class="row"><span class="num">11</span><span class="what">Disqualification rules</span><span class="why">Franchise branch — the brand buys software, not the Wakad manager.</span></div>
+    <div class="row"><span class="num">→</span><span class="what">Vendor, clinic, institution</span><span class="why">A sports retailer opening a store is not a gym.</span></div>
+    <div class="row"><span class="num">→</span><span class="what">Crime, accident, no event</span><span class="why">A police report is not a buying signal.</span></div>
+    <div class="row"><span class="num">→</span><span class="what">Duplicate</span><span class="why">Four outlets, one press release = one prospect.</span></div>
+  </div>
+  <p class="lead">Every one of those is a <b>recorded rejection</b>, not a silent drop.</p>
+  <div class="note">1:10 · 25s</div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="kicker">The judgment — part 2</div>
+  <h2>Then a model reads the survivors — and <em>caught my mistake</em>.</h2>
+  <div class="two wide">
+    <div class="card-demo">
+      <div class="who">SportsSkill</div>
+      <div class="meta">13 Oct 2026 · revsportz.in · rules said STAGE A — call this week</div>
+      <div class="quote">"SportsSkill launches its first physical high-performance centre in Pune."</div>
+      <div class="ai"><span class="label">AI assessment · nemotron-3-ultra-550b</span>
+        Buyer category: <b>adjacent</b>, not a gym. Verify before pitching.
+      </div>
+    </div>
+    <div>
+      <p class="lead" style="margin-top:0">Rules saw "fitness centre" and scored it a 5. The model read the same text and said: <b>this is a sports-tech platform</b>, not an independent gym.</p>
+      <p class="lead" style="font-size:16px">It is additive by design. It cannot reject, re-score or re-rank — and if the API dies, the card is labelled <b>"rules-only fallback"</b> and the run still ships.</p>
+    </div>
+  </div>
+  <div class="note">1:35 · 30s</div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="kicker">The hero slide</div>
+  <div class="two">
+    <div>
+      <h2><em>63 in. 3 out.</em><br>60 thrown away with a reason.</h2>
+      <div class="tally">
+        <div><div class="n">63</div><div class="l">scanned</div></div>
+        <div class="mint"><div class="n">3</div><div class="l">opportunities</div></div>
+        <div class="red"><div class="n">60</div><div class="l">rejected</div></div>
+      </div>
+    </div>
+    <div>
+      <p class="lead" style="margin-top:0">Every lead tool shows you what it found. That's half the work.</p>
+      <p class="lead">The other half is <b>what it refused</b> — and the reason. A judge can audit my judgment in ten seconds. So can I, next Monday.</p>
+    </div>
+  </div>
+  <div class="note">2:05 · 25s</div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="kicker">Delivery</div>
+  <h2>Monday, 12:30. <em>Nobody touches it.</em></h2>
+  <div class="two">
+    <div>
+      <div class="rows" style="margin-top:0">
+        <div class="row"><span class="num">07:00</span><span class="what">UTC · Monday</span><span class="why">GitHub Actions cron fires. No laptop, no login.</span></div>
+        <div class="row"><span class="num">+20s</span><span class="what">Sweep + assess</span><span class="why">Six sources, three AI calls, ~20 seconds.</span></div>
+        <div class="row"><span class="num">→</span><span class="what">Telegram</span><span class="why">Digest with source link, verdict, next action.</span></div>
+        <div class="row"><span class="num">→</span><span class="what">Wall + run log</span><span class="why">Committed back to git. Public, auditable.</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="lead" style="margin-top:0;font-size:17px">The message is the product. If it doesn't arrive on a phone, the automation isn't real.</p>
+      <div class="pill" style="margin-top:8px"><span class="dot"></span>delivered · message 5</div>
+    </div>
+  </div>
+  <div class="note">2:30 · 25s</div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="kicker">What it changes for sales</div>
+  <h2>The list stops being <em>everyone</em>.</h2>
+  <div class="rows">
+    <div class="row"><span class="num">Mon</span><span class="what">12:30 — the list lands</span><span class="why">Three cards, not a spreadsheet. Each one dated and sourced.</span></div>
+    <div class="row"><span class="num">Tue</span><span class="what">Two calls, not twenty</span><span class="why">Both opened with "you inaugurated on the 21st" — not "do you need marketing?"</span></div>
+    <div class="row"><span class="num">Wed</span><span class="what">The objection is on the card</span><span class="why">Budget unknown. Decision-maker unknown. Already have an agency — unknown.</span></div>
+    <div class="row"><span class="num">Fri</span><span class="what">Rejections feed the targeting</span><span class="why">If everything is a franchise, my ICP is wrong — and the log says so.</span></div>
+  </div>
+  <p class="lead">A rep with three evidenced reasons to call beats a rep with three hundred names.</p>
+  <div class="note">2:55 · 30s</div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="kicker">What I have not proven</div>
+  <h2>Three claims. <em>Only two are earned.</em></h2>
+  <div class="unproven">
+    <div><span class="tick">✓</span><span><b>The pipeline works.</b> Five runs, delivered digests, committed logs.</span></div>
+    <div><span class="tick">✓</span><span><b>The AI step works.</b> 3 of 3 survivors assessed, 20 seconds, structured output validated.</span></div>
+    <div><span class="tick">✗</span><span><b>The unattended cron has never fired.</b> Every run so far was triggered by hand. First scheduled run is Monday 12:30 — after this talk.</span></div>
+  </div>
+  <p class="lead">And the coverage is honest too: press only. <b>The gyms I can actually sell to have no press footprint.</b></p>
+  <div class="note">3:25 · 30s</div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="kicker">Future scope</div>
+  <h2>Next: stop finding <em>launches</em>. Start finding <em>my buyer</em>.</h2>
+  <div class="rows">
+    <div class="row"><span class="num">01</span><span class="what">Places proximity sweep</span><span class="why">Radius over Baner, Balewadi, Aundh, Wakad. Review count as "new", website absence as the gap.</span></div>
+    <div class="row"><span class="num">02</span><span class="what">Persistence + delta</span><span class="why">"New this week" instead of re-sending the same three gyms every Monday.</span></div>
+    <div class="row"><span class="num">03</span><span class="what">CRM write-back</span><span class="why">Signal becomes a deal, with the evidence attached to the deal.</span></div>
+    <div class="row"><span class="num">04</span><span class="what">Outcome feedback</span><span class="why">Log what was called and what closed — then the scoring stops being a rubric.</span></div>
+  </div>
+  <div class="note">3:55 · 30s</div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="kicker">Close</div>
+  <h1>Anyone can generate a list.<br>The hard part is <em>earning the right to skip it</em>.</h1>
+  <p class="lead">Gym Radar · Pune · weekly at 12:30<br>
+  <span style="font-family:var(--mono);font-size:14px">github.com/dheerajkumar1a1a/find-my-gym-prospects</span></p>
+  <div class="note">4:25 · 35s</div>
+</section>
+
+<div class="bar"><i id="prog"></i></div>
+<div class="brand">GYM RADAR</div>
+<div class="count" id="count">01 / 11</div>
+<div class="hint">← → to move · F for fullscreen</div>
+
+<script>
+const slides = [...document.querySelectorAll('.slide')];
+let i = 0;
+
+function show(n){
+  i = Math.max(0, Math.min(slides.length - 1, n));
+  slides.forEach((s, k) => s.classList.toggle('on', k === i));
+  document.getElementById('prog').style.width = ((i + 1) / slides.length * 100) + '%';
+  document.getElementById('count').textContent =
+    String(i + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+  history.replaceState(null, '', '#' + (i + 1));
+}
+
+document.addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(i + 1); }
+  if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); show(i - 1); }
+  if (e.key === 'Home') show(0);
+  if (e.key === 'End') show(slides.length - 1);
+  if (e.key.toLowerCase() === 'f') {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+});
+document.addEventListener('click', (e) => {
+  if (e.clientX > window.innerWidth * 0.35) show(i + 1); else show(i - 1);
+});
+
+const start = parseInt(location.hash.replace('#', ''), 10);
+show(Number.isFinite(start) && start > 0 ? start - 1 : 0);
+</script>
+</body>
+</html>
