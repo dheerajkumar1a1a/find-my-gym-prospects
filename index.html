@@ -186,6 +186,18 @@ function card(o){
     <p class="ev-line">${esc(o.evidence)}</p>
     <div class="why"><b>Why now:</b> ${esc(o.why_now)}</div>
 
+    ${o.assessment ? `
+    <div class="why" style="border-color:#24391f">
+      <b>AI assessment</b> <span style="color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.8px">${esc(o.assessment.buyer_category)} · event ${esc(o.assessment.event_timing)} · confidence ${o.assessment.confidence}/5</span><br>
+      ${esc(o.assessment.why)}<br>
+      <span style="color:var(--mut)">Next: ${esc(o.assessment.next_action)}</span>
+      ${o.assessment.unknowns.length ? `<br><span style="color:var(--dim)">Unknown: ${esc(o.assessment.unknowns.join(' · '))}</span>` : ''}
+      ${o.assessment.evidence_supports.length ? `<br><span style="color:var(--dim)">Supports: “${esc(o.assessment.evidence_supports[0])}”</span>` : ''}
+    </div>` : `
+    <div class="why" style="border-color:#3d3020;color:var(--amber)">
+      Rules-only fallback; AI assessment unavailable${o.assessment_error ? ` — ${esc(o.assessment_error)}` : ''}.
+    </div>`}
+
     <div class="grid">
       <div><div class="metric">Evidence</div>${bar(s.evidence)}<div class="mval">${s.evidence}/5</div></div>
       <div><div class="metric">Timing</div>${bar(s.timing)}<div class="mval">${s.timing}/5 · ${ago(o.event_date)}</div></div>
