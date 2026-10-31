@@ -1,0 +1,7 @@
+{
+  "name": "gym-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-based opportunity radar for gyms in Pune. Signal -> evidence -> opportunity -> next action."
+}

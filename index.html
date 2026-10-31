@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Radar · Pune</title>
+<meta name="description" content="Evidence-based opportunity radar for gyms in Pune. Signal, evidence, opportunity, next action.">
+<style>
+:root{
+  --bg:#0b0d10; --panel:#12161b; --panel2:#171c22; --line:#242b33;
+  --ink:#e9eef5; --mut:#8b97a6; --dim:#5c6672;
+  --lime:#c8ff4d; --amber:#ffb648; --red:#ff6b6b; --blue:#6fb3ff;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.wrap{max-width:1180px;margin:0 auto;padding:26px 22px 80px}
+
+/* header */
+header{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:27px;letter-spacing:-.6px;font-weight:800}
+h1 span{color:var(--lime)}
+.sub{margin:5px 0 0;color:var(--mut);font-size:13.5px;line-height:1.5;max-width:620px}
+.spacer{flex:1}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+button{font-family:inherit;font-size:13px;font-weight:650;border-radius:9px;cursor:pointer;
+  border:1px solid var(--line);background:var(--panel2);color:var(--ink);padding:9px 14px;transition:.15s}
+button:hover{border-color:#39434f;background:#1c222a}
+button.primary{background:var(--lime);color:#0b0d10;border-color:var(--lime)}
+button.primary:hover{background:#d4ff6b}
+button:disabled{opacity:.45;cursor:progress}
+
+/* coverage */
+.cov{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+.src{display:flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;padding:6px 10px;font-size:12px;color:var(--mut)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none}
+.dot.bad{background:var(--red)}
+.src b{color:var(--ink);font-weight:650}
+
+/* tally */
+.tally{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0 6px;align-items:baseline}
+.tally .n{font-family:var(--mono);font-size:30px;font-weight:700;letter-spacing:-1px}
+.tally .l{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:1.1px;margin-top:2px}
+.tally .n.good{color:var(--lime)} .tally .n.warn{color:var(--amber)}
+
+/* views */
+.views{display:flex;gap:6px;margin:20px 0 14px}
+.view{background:transparent;border:1px solid var(--line);color:var(--mut);padding:6px 13px;font-size:12.5px;border-radius:20px}
+.view.on{background:var(--ink);color:#0b0d10;border-color:var(--ink);font-weight:700}
+
+/* cards */
+.cards{display:grid;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime)}
+.card.stageC:before{background:var(--amber)}
+.chead{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.gym{font-size:20px;font-weight:750;letter-spacing:-.3px;margin:0}
+.loc{color:var(--mut);font-size:13px;margin-top:3px}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.b{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.8px;
+  padding:3px 8px;border-radius:5px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.b.ev{background:#1b2530;color:var(--blue);border-color:#233244}
+.b.stA{background:#16241a;color:var(--lime);border-color:#24391f}
+.b.stC{background:#2a2114;color:var(--amber);border-color:#3d3020}
+.headline{margin:13px 0 0;font-size:15px;line-height:1.45}
+.ev-line{margin:10px 0 0;font-size:12.5px;color:var(--mut);line-height:1.5;
+  border-left:2px solid var(--line);padding-left:11px}
+.why{margin:12px 0 0;font-size:13px;line-height:1.5;background:var(--panel2);
+  border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+.why b{color:var(--lime);font-weight:650}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:14px}
+.metric{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.9px}
+.bar{height:4px;background:#20262e;border-radius:3px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--lime);border-radius:3px}
+.mval{font-family:var(--mono);font-size:11.5px;color:var(--mut);margin-top:5px}
+.foot{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:15px;padding-top:13px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mut)}
+.foot a{font-weight:600}
+.warn-line{color:var(--amber)}
+
+/* rejections */
+.rej{margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+.rej h2{margin:0 0 4px;font-size:15px;font-weight:700}
+.rej p.lead{margin:0 0 14px;color:var(--mut);font-size:12.5px;max-width:640px;line-height:1.5}
+.rgroup{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid #1a2027;font-size:13px}
+.rgroup .rn{font-family:var(--mono);color:var(--amber);min-width:34px;font-weight:700}
+.rgroup .rr{font-weight:600;min-width:230px}
+.rgroup .rd{color:var(--mut);font-size:12.5px}
+.empty{padding:44px;text-align:center;color:var(--mut);border:1px dashed var(--line);border-radius:14px;font-size:14px;line-height:1.6}
+.spin{display:inline-block;width:11px;height:11px;border:2px solid var(--dim);border-top-color:var(--lime);
+  border-radius:50%;animation:sp .7s linear infinite;vertical-align:-1px;margin-right:7px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.note{font-size:11.5px;color:var(--dim);margin-top:26px;line-height:1.6;max-width:760px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Gym <span>Radar</span></h1>
+      <p class="sub">Gyms in Pune that just showed a commercially relevant change. Every card carries the source and the date it came from. Nothing here is inferred into existence.</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="actions">
+      <button class="primary" id="btnRun">Run sweep now</button>
+      <button id="btnSend">Send to Telegram</button>
+    </div>
+  </header>
+
+  <div class="cov" id="cov"></div>
+  <div class="tally" id="tally"></div>
+  <div class="views" id="views" style="display:none">
+    <button class="view on" data-v="act_now">Act now</button>
+    <button class="view" data-v="best_evidence">Best evidenced</button>
+  </div>
+
+  <div class="cards" id="cards">
+    <div class="empty"><span class="spin"></span>Running the sweep. Six sources, about fifteen seconds.</div>
+  </div>
+
+  <div class="rej" id="rej" style="display:none"></div>
+
+  <p class="note">
+    Coverage is press and news only. A gym with no press footprint cannot appear here, and most
+    independent gyms in Pune have none. That gap is the reason the proximity sweep exists.
+  </p>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let LOG = null, view = 'act_now', STATIC = false;
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtDate = d => d ? new Date(d).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'}) : 'date unknown';
+const ago = d => {
+  if (!d) return '';
+  const days = Math.round((Date.now() - new Date(d).getTime()) / 86400000);
+  return days <= 0 ? 'today' : days === 1 ? 'yesterday' : days + ' days ago';
+};
+
+function renderCov(sources){
+  $('#cov').innerHTML = sources.map(s => `
+    <div class="src">
+      <span class="dot ${s.failed && !s.ok ? 'bad' : ''}"></span>
+      <b>${esc(s.name)}</b>
+      <span>${s.items} items${s.failed ? ` · ${s.failed} failed` : ''}</span>
+    </div>`).join('');
+}
+
+function renderTally(log){
+  const c = log.counts;
+  $('#tally').innerHTML = `
+    <div><div class="n">${c.items_scanned}</div><div class="l">items scanned</div></div>
+    <div><div class="n good">${c.opportunities}</div><div class="l">opportunities</div></div>
+    <div><div class="n warn">${c.rejected}</div><div class="l">rejected</div></div>
+    <div><div class="n warn">${c.duplicates}</div><div class="l">duplicates collapsed</div></div>
+    <div><div class="n" style="font-size:15px">${new Date(log.at).toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})}</div><div class="l">sweep time</div></div>`;
+}
+
+function card(o){
+  const s = o.scores;
+  const bar = (v) => `<div class="bar"><i style="width:${v*20}%"></i></div>`;
+  const srcLink = o.source_resolvable && o.source_url
+    ? `<a href="${esc(o.source_url)}" target="_blank" rel="noopener">${esc(o.source_name)}</a>`
+    : `<span class="warn-line">${esc(o.source_name)} · link not directly resolvable</span>`;
+  const dupes = o.also_reported_by.length
+    ? `<span>also reported by ${[...new Set(o.also_reported_by.map(d => d.source))].map(esc).join(', ')}</span>` : '';
+  return `
+  <article class="card ${o.stage.tier === 'C' ? 'stageC' : ''}">
+    <div class="chead">
+      <div>
+        <h2 class="gym">${esc(o.gym)}</h2>
+        <div class="loc">${esc(o.locality)}</div>
+      </div>
+      <div class="badges">
+        <span class="b ev">${esc(o.event_type)} · ${fmtDate(o.event_date)}</span>
+        <span class="b ${o.stage.tier === 'C' ? 'stC' : 'stA'}">${esc(o.stage.label)}</span>
+      </div>
+    </div>
+
+    <p class="headline">${esc(o.headline)}</p>
+    <p class="ev-line">${esc(o.evidence)}</p>
+    <div class="why"><b>Why now:</b> ${esc(o.why_now)}</div>
+
+    <div class="grid">
+      <div><div class="metric">Evidence</div>${bar(s.evidence)}<div class="mval">${s.evidence}/5</div></div>
+      <div><div class="metric">Timing</div>${bar(s.timing)}<div class="mval">${s.timing}/5 · ${ago(o.event_date)}</div></div>
+      <div><div class="metric">Relevance</div>${bar(s.relevance)}<div class="mval">${s.relevance}/5</div></div>
+    </div>
+
+    <div class="why" style="margin-top:14px"><b>Offer:</b> ${esc(o.offer.offer)} <span style="color:var(--mut)">· ${esc(o.offer.service)}</span><br>
+      <span style="color:var(--mut)">Next: ${esc(o.offer.next_action)}</span></div>
+
+    <div class="foot">
+      <span>Source: ${srcLink}</span>
+      ${dupes}
+      <span style="color:var(--dim)">Unknown: ${esc(o.unknowns.join(' · '))}</span>
+    </div>
+  </article>`;
+}
+
+function renderCards(){
+  const byId = Object.fromEntries(LOG.opportunities.map(o => [o.id, o]));
+  const list = (LOG.views[view] || []).map(id => byId[id]).filter(Boolean);
+  $('#views').style.display = LOG.opportunities.length > 1 ? 'flex' : 'none';
+  $('#cards').innerHTML = list.length
+    ? list.map(card).join('')
+    : `<div class="empty">No credible opportunities in this sweep.<br><br>
+       That is a real answer, not a failure. ${LOG.counts.rejected} items were checked and thrown out;
+       the rejection log below says why.</div>`;
+}
+
+function renderRej(){
+  const groups = {};
+  for (const r of LOG.rejected) {
+    groups[r.reason] = groups[r.reason] || { n: 0, detail: r.detail, names: [] };
+    groups[r.reason].n++;
+    if (groups[r.reason].names.length < 3) groups[r.reason].names.push(r.name);
+  }
+  const rows = Object.entries(groups).sort((a, b) => b[1].n - a[1].n);
+  $('#rej').style.display = rows.length ? 'block' : 'none';
+  $('#rej').innerHTML = `
+    <h2>What we threw away</h2>
+    <p class="lead">A tool that only shows you what it found is hiding half its work. This is the other half:
+      ${LOG.counts.rejected} items rejected across ${rows.length} reasons.</p>
+    ${rows.map(([reason, g]) => `
+      <div class="rgroup">
+        <span class="rn">${g.n}</span>
+        <span class="rr">${esc(reason)}</span>
+        <span class="rd">${esc(g.detail)}${g.names.length ? ` — e.g. ${esc(g.names.join(', '))}` : ''}</span>
+      </div>`).join('')}`;
+}
+
+async function fetchLog(){
+  // Live API when it exists (local server or Vercel), otherwise the run log
+  // committed by the GitHub Actions sweep. Same JSON, same wall.
+  try {
+    const r = await fetch('/api/radar', { cache: 'no-store' });
+    if (r.ok) { STATIC = false; return await r.json(); }
+  } catch (e) { /* no server, fall through */ }
+  const r = await fetch('./runs/latest.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error('no live API and no saved run yet');
+  STATIC = true;
+  return await r.json();
+}
+
+function setMode(){
+  const b = $('#btnRun');
+  if (STATIC) {
+    b.disabled = true;
+    b.textContent = 'Scheduled 07:00 IST';
+    b.title = 'Runs daily via GitHub Actions. This page reads the committed run log.';
+    $('#btnSend').style.display = 'none';
+  }
+}
+
+async function load(force){
+  if (force) { $('#cards').innerHTML = '<div class="empty"><span class="spin"></span>Sweeping. Six sources, about fifteen seconds.</div>'; }
+  try {
+    LOG = await fetchLog();
+    renderCov(LOG.sources); renderTally(LOG); renderCards(); renderRej(); setMode();
+  } catch (e) {
+    $('#cards').innerHTML = `<div class="empty">Could not load a run: ${esc(e.message)}<br><br>
+      Locally, run <code>node serve.mjs</code>. On GitHub Pages the wall reads
+      <code>runs/latest.json</code>, written by the daily sweep.</div>`;
+  }
+}
+
+$('#btnRun').onclick = async () => {
+  const b = $('#btnRun'); b.disabled = true; b.textContent = 'Sweeping…';
+  await load(true);
+  b.disabled = false; b.textContent = 'Run sweep now';
+};
+$('#btnSend').onclick = async () => {
+  const b = $('#btnSend'); b.disabled = true; b.textContent = 'Sending…';
+  try {
+    const r = await fetch('/api/run?notify=1', { cache: 'no-store' });
+    const j = await r.json();
+    b.textContent = j.delivery && j.delivery.ok ? 'Sent ✓' : 'Not sent';
+    if (j.delivery && !j.delivery.ok) alert('Telegram: ' + (j.delivery.error || 'unknown error'));
+  } catch (e) {
+    b.textContent = 'Not sent'; alert(e.message);
+  }
+  setTimeout(() => { b.textContent = 'Send to Telegram'; b.disabled = false; }, 2500);
+};
+document.querySelectorAll('.view').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.view').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); view = b.dataset.v; if (LOG) renderCards();
+});
+
+load(false);
+</script>
+</body>
+</html>
