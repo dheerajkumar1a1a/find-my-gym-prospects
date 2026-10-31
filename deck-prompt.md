@@ -42,8 +42,10 @@ rejected and why, labels its own uncertainty, and states what has not been prove
 - Live wall: `https://dheerajkumar1a1a.github.io/find-my-gym-prospects/`
 - Repo: `github.com/dheerajkumar1a1a/find-my-gym-prospects` (public, includes a review doc
   listing known weaknesses).
-- Rejection reasons observed in real runs: franchise branch, vendor/retailer, spa/clinic,
-  institutional body, crime report, no event, duplicate, unidentifiable business.
+- Rejection rules implemented: franchise branch, vendor/retailer, spa/clinic, institutional body,
+  crime report, no event, outside Pune, duplicate, unidentifiable business.
+  In the canonical run the top four were: **no event 25, not a business event 11, outside Pune 9,
+  duplicate 5** — 60 rejections across 8 reasons. Use those counts, not the rule names.
 - Sources: Bing News RSS (links resolve to publisher), Google News RSS (fallback, links do not
   resolve), Punekar News, Pune Mirror.
 - Verified dead/blocked keylessly: Sakal, eSakal, TOI Pune, HT Pune, GeM, mahatenders,
