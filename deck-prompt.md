@@ -99,10 +99,9 @@ reason I can point at.
 **4 · Rules decide who survives**
 Kicker: `THE JUDGMENT — PART 1`
 Headline: The rules decide **who survives**.
-Four rows: `11` disqualification rules · vendor/clinic/institution · crime/no event ·
-duplicate.
-Right column: *Franchise branch — the brand buys the software, not the Wakad manager.*
-Footer: Every one is a recorded rejection, not a silent drop.
+Four rows with real counts from the canonical run: `25` no event · `11` not a business event
+(crime, accident) · `9` outside Pune · `5` duplicate.
+Footer: 60 rejections across 8 reasons. Every one recorded, none silently dropped.
 
 **5 · The AI caught my mistake**
 Kicker: `THE JUDGMENT — PART 2`

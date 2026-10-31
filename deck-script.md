@@ -47,11 +47,13 @@ timings below have no slack.
 
 ## 1:10 — Slide 4 · Rules decide who survives (25s)
 
-> "Eleven disqualification rules. A franchise branch is out — the brand buys the software, not
-> the Wakad manager. A sports retailer opening a store is out, it's a vendor. A police report
-> is out. Four outlets carrying the same press release collapse into one prospect.
+> "Eleven disqualification rules, and here's what they actually threw out on the last run.
 >
-> Every one of those is recorded, not silently dropped."
+> Twenty-five headlines described no event at all. Eleven were crime or accident reports — a
+> police report is not a buying signal. Nine were outside Pune. Five were the same press
+> release carried by four outlets, collapsed into one prospect.
+>
+> Sixty rejections, eight reasons, every one recorded. Nothing silently dropped."
 
 ## 1:35 — Slide 5 · The AI caught my mistake (30s)
 
@@ -138,8 +140,8 @@ timings below have no slack.
 ## If you get asked
 
 **"Isn't this just an RSS reader with a filter?"**
-> "The filter is the product. It rejects a franchise branch because the branch can't buy, and
-> it tells you it did. An RSS reader can't tell you why it's safe to ignore something."
+> "The filter is the product. It rejects a duplicate and a crime report and tells you it did.
+> An RSS reader can't tell you why it's safe to ignore something."
 
 **"Why only three results?"**
 > "Because press coverage only finds premium launches, and my ICP doesn't get press. Three is
