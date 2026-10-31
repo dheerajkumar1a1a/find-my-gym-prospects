@@ -1,6 +1,6 @@
 {
-  "run_id": "run_mvw0rko5",
-  "at": "2026-10-31T06:27:46.661Z",
+  "run_id": "run_mvw1onx7",
+  "at": "2026-10-31T06:53:30.523Z",
   "scope": {
     "market": "gyms",
     "geo": "Pune",
@@ -9,9 +9,9 @@
   },
   "window_days": 365,
   "counts": {
-    "items_scanned": 56,
+    "items_scanned": 59,
     "opportunities": 3,
-    "rejected": 53,
+    "rejected": 56,
     "duplicates": 3
   },
   "sources": [
@@ -54,13 +54,23 @@
       "errors": []
     }
   ],
+  "ai": {
+    "status": "ok",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "assessed": 3,
+    "failed": 0,
+    "ms": 19043,
+    "error": null
+  },
   "opportunities": [
     {
       "id": "tungsten-fitness-club|wanowrie|opening",
       "gym": "Tungsten Fitness Club",
       "locality": "Wanowrie",
       "event_type": "opening",
+      "published_at": "2026-10-21",
       "event_date": "2026-10-21",
+      "date_semantics": "publication date from the feed; the opening date itself is not established",
       "headline": "Business News | Suniel Shetty Inaugurates Tungsten Fitness Club Flagship Pune Centre in Wanowrie",
       "evidence": "Mumbai (Maharashtra) [India], October 21: Expanding its footprint into Maharashtra’s cultural and IT hub, premium fitness chain Tungsten ...",
       "source_name": "latestly.com",
@@ -102,14 +112,36 @@
         "Whether they have a budget for this",
         "Who actually decides",
         "Whether they already have a vendor or agency"
-      ]
+      ],
+      "assessment": {
+        "buyer_category": "gym",
+        "relevant_buyer": true,
+        "event_timing": "completed",
+        "service_fit": "grand-opening marketing & member acquisition",
+        "why": "The headline states Suniel Shetty 'inaugurates' the flagship Pune centre, and the excerpt confirms the premium chain is 'expanding its footprint' into Maharashtra on October 21, indicating the launch has already occurred.",
+        "next_action": "Reach out to Tungsten Fitness Club's Pune management this week to offer post-launch digital marketing packages (local SEO, paid social, referral programs) to sustain momentum after the inauguration.",
+        "unknowns": [
+          "Contact details for the local GM or marketing lead",
+          "Current marketing stack and budget",
+          "Member capacity and pricing tiers",
+          "Whether they use a CRM or marketing automation already"
+        ],
+        "evidence_supports": [
+          "Suniel Shetty Inaugurates Tungsten Fitness Club Flagship Pune Centre in Wanowrie",
+          "Expanding its footprint into Maharashtra's cultural and IT hub, premium fitness chain Tungsten"
+        ],
+        "confidence": 4
+      },
+      "assessment_status": "ok"
     },
     {
       "id": "sportsskill||opening",
       "gym": "SportsSkill",
       "locality": "Pune (locality not stated)",
       "event_type": "opening",
+      "published_at": "2026-10-13",
       "event_date": "2026-10-13",
+      "date_semantics": "publication date from the feed; the opening date itself is not established",
       "headline": "SportsSkill Launches Its First Physical High-Performance Centre in Pune",
       "evidence": "SportsSkill, the sports-tech and athlete development platform behind the Chance2Sports Foundation, took its technology off the screen and onto the court on October 13.",
       "source_name": "revsportz.in",
@@ -138,14 +170,37 @@
         "Whether they have a budget for this",
         "Who actually decides",
         "Whether they already have a vendor or agency"
-      ]
+      ],
+      "assessment": {
+        "buyer_category": "adjacent",
+        "relevant_buyer": true,
+        "event_timing": "completed",
+        "service_fit": "gym marketing systems for new facility launch",
+        "why": "SportsSkill, a sports-tech platform, launched its first physical high-performance centre in Pune on October 13, indicating a new brick-and-mortar location that could require member acquisition and retention marketing.",
+        "next_action": "Contact SportsSkill's leadership this week to discuss marketing system needs for their newly opened Pune high-performance centre.",
+        "unknowns": [
+          "Exact locality within Pune",
+          "Centre size, capacity, or equipment details",
+          "Budget allocated for marketing systems",
+          "Decision-maker names or contact information",
+          "Current marketing stack or vendor relationships"
+        ],
+        "evidence_supports": [
+          "SportsSkill Launches Its First Physical High-Performance Centre in Pune",
+          "took its technology off the screen and onto the court on October 13"
+        ],
+        "confidence": 4
+      },
+      "assessment_status": "ok"
     },
     {
       "id": "stamvia||opening",
       "gym": "STAMVIA",
       "locality": "Pune (locality not stated)",
       "event_type": "opening",
+      "published_at": "2026-08-18",
       "event_date": "2026-08-18",
+      "date_semantics": "publication date from the feed; the opening date itself is not established",
       "headline": "STAMVIA Launches Flagship Fitness Centre In Pune - Passionate In Marketing",
       "evidence": "STAMVIA Launches Flagship Fitness Centre",
       "source_name": "Google News",
@@ -174,7 +229,28 @@
         "Whether they have a budget for this",
         "Who actually decides",
         "Whether they already have a vendor or agency"
-      ]
+      ],
+      "assessment": {
+        "buyer_category": "gym",
+        "relevant_buyer": true,
+        "event_timing": "completed",
+        "service_fit": "marketing systems for new gym launch",
+        "why": "The headline announces STAMVIA's launch of a flagship fitness centre in Pune, indicating a new gym opening that would need marketing systems.",
+        "next_action": "Reach out to STAMVIA's management this week to offer a demo of marketing automation tailored for a new gym location.",
+        "unknowns": [
+          "Exact opening date",
+          "Facility size and member capacity",
+          "Marketing budget allocated",
+          "Decision-maker contact details",
+          "Existing marketing technology stack"
+        ],
+        "evidence_supports": [
+          "STAMVIA Launches Flagship Fitness Centre In Pune",
+          "STAMVIA Launches Flagship Fitness Centre"
+        ],
+        "confidence": 4
+      },
+      "assessment_status": "ok"
     }
   ],
   "views": {
@@ -226,18 +302,18 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONHlRSDZOMUhYTkhoUjMwUUduN2J0NGhybGs2WUdoalhIWjFob0dpNHJCNGtsZjY4bEk2YWJVblVISHM3VEgtNDFQVGdNSlcyal93c3hjcEg5N3U0cWNiVGF6WlRRTWRHZElLbEhMVTRhVlFsNGFVQ1FMb2R0S01Gdl9lUVpqU0VsMWl0aGxweDRRSlN0YjlYME1MR05FSUw3ZTM2Ty1yUHBab1A3ZjB3YTN6a1hiSnZMRXYtMWJjUjN1S0HSAcgBQVVfeXFMTUZlMHYtNU1ZVE54SmRTR3FpX2xnTlZQRWlVbC1EVGQxNW9zTEJtNDlHNzVNS0JPQk8zcm1adHdqdUplNDJCNGlmSS1EV0ZOQUhjUXRvUC00ZnhTYkxUMGV4QkdZcmxab3JPaEhNR2FmTnYwemNoM1hjdW1xaEhoZmVuZ3RxbnVrdlJoNWhuV0lvTnlLTEZia3EwMTk3QUpfdE1oQ2VjaV9DUk9vU29WMHlHUWZRVmFTOG1pdmJMMG10Z3JQTEJMZXA?oc=5"
     },
     {
-      "name": "3 juveniles among 4 detained for firing, machete attack on gym owner |",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQazVUSFJiMUNoVUM0amlyU3VvbVI5UkY0YmZydk1ITmRCWW5tX3VvYVRtNG9ZQzM1X1ZTbHhYc1gtX3h0aVZwQWgzNVJ5ZTNsd2FyMHBnSFp0S3hEZDR4SGgzS3J6Wk82M3hrMTZQN0p2MHJZNkE1NzRqX3hjSk1jakZabzd6clF0QV9hdWRsek5yZjVCOEdnZ0J3SjJzLU9aeG9UaTR5Z0kxdmN0MklXQkVWV3VFaUl1cHVQc2g3d29rd2trMzBQR2t2YXg5MFB5WWfSAdcBQVVfeXFMTmo4bVg5dHd2YmhYQWVwTzFGZ2ZLN01VN3RJMFVCMGNKVFBYczY3dWkxY3lSeldCMDV2N2N0bnY4TTJ5NHd3X2N2MkdBb2gtNGFGVlVvYW42UG1QUmVvc1l4UkxPajJnRTFFcDBlSVk5LTdZbWNWVnJMU1lHT2kxLTF5LTBYT09wdDRKdE9Kb3hPM1U5YTFqMVhyQXgxcTNQZGRwdW9qMEFXN2JXdktLX0dHdDg1S19nWTJVQi14eFRPUjlIOV9qVnh3M0dJdzBZdkhJVWhERTg?oc=5"
-    },
-    {
       "name": "One held, three minors detained for firing at gym owner - The Times of",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcVEtMGQxelRRam1WS05wTUY4aXhRbzdWazljeGtfdE5YamlCY2dDWS1YeHNSM1F0Q1U4Q0NxVF9qeDlMY2pMNTJuMHJ3dVZHbGwwbTlDNXA1WmpRTzRPOTJKYmVPbnFRWld5S0V3Mkk1VkFFaU1HZnFRRTlPTjJRQUZidlNrOV9kdVh2eHFZV3NYSWJlRU9Day1qTHJwUWtJdGtfRFIwdHQ5Nk1NSXBXOGVuWG53Qm5EUXZnWHYwbTNPd3F50gHKAUFVX3lxTFB3ZGJLRWRjY3pVTFZlSlo0Y2Z3aE5tc2JnQWJDV0tibFV5dmdJd1ZwNkRPN3ZmU1dXNW9xWlE5MGJkYWFkdUs1N1R3Qk9RaVhCc01wTmp1YTBoN00zZjQtMkJ2dTRYU2VpbnNSX1pjSFRINFRjZ0IzbkFyUU1vWWxyczJEWGJlR3EtdHp2ajZDaUs4YUZBMjBra3BDc3FrcEpfNkNmSHM1UWhPOVpyUkRKU0U5NS00MlJpajRZeWtnekJlYWV0UnpJSFE?oc=5"
+    },
+    {
+      "name": "3 juveniles among 4 detained for firing, machete attack on gym owner |",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQazVUSFJiMUNoVUM0amlyU3VvbVI5UkY0YmZydk1ITmRCWW5tX3VvYVRtNG9ZQzM1X1ZTbHhYc1gtX3h0aVZwQWgzNVJ5ZTNsd2FyMHBnSFp0S3hEZDR4SGgzS3J6Wk82M3hrMTZQN0p2MHJZNkE1NzRqX3hjSk1jakZabzd6clF0QV9hdWRsek5yZjVCOEdnZ0J3SjJzLU9aeG9UaTR5Z0kxdmN0MklXQkVWV3VFaUl1cHVQc2g3d29rd2trMzBQR2t2YXg5MFB5WWfSAdcBQVVfeXFMTmo4bVg5dHd2YmhYQWVwTzFGZ2ZLN01VN3RJMFVCMGNKVFBYczY3dWkxY3lSeldCMDV2N2N0bnY4TTJ5NHd3X2N2MkdBb2gtNGFGVlVvYW42UG1QUmVvc1l4UkxPajJnRTFFcDBlSVk5LTdZbWNWVnJMU1lHT2kxLTF5LTBYT09wdDRKdE9Kb3hPM1U5YTFqMVhyQXgxcTNQZGRwdW9qMEFXN2JXdktLX0dHdDg1S19nWTJVQi14eFRPUjlIOV9qVnh3M0dJdzBZdkhJVWhERTg?oc=5"
     },
     {
       "name": "UFC GYM",
@@ -408,13 +484,6 @@
       "url": "https://www.freepressjournal.in/pune/exclusive-womens-gym-built-under-smart-city-mission-in-punes-baner-handed-over-to-private-company-residents-slam-pmc-photos"
     },
     {
-      "name": "Total Sports & Fitness expands footprint with Pune flagship store, eye",
-      "reason": "vendor, not a gym",
-      "detail": "this sells equipment or runs a store, it does not buy gym services",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOX0RYeUpIemxsbTE2dnVvRkEzWTdOVF9JajJZRGtDWGxXLTg3clhLZHFkek9RWm9qa1hYaUdmaFJPSk9ZWmsxYk1Gc0E0Z0pUR21NYW5adUF0VEx3bmdHNnZQQ0tvZTQ1ZTktYlF6R1pVUXhDbzROUGd3TDlCX3FpNkVMVDgwMUJQQ181VndfQ3p0SjgtaXNOTE0wYlZ1Y2tycXQ4MVFqLVI1TDBRay1Bcm1WRVFaMWtOTEdPYkFSc3FKQVJ4QWc5dG11TXR5ZjlOM0dZYm9WOUJfbXZha0NWWVVaUWUwY1lPRFUyctIB8gFBVV95cUxNVWxTYTQwelYyZ1QzOG5aZExFNEo4aW1DT1dOS1lXbGFKUXQxdW1pcS1QX1ZYVmhqTVU3OWJxbFdkSGJXSEpvbUMtYjBVbXBlMml1U0lxelRwb3loUzFIS2JrX3htc1NjYnFrV1h2T04wLUo3Z3dRTmNLZ0dLeVNxdUQ3b2tjMXEzanRrUjk5T2xhQWRHamJocDZLM2Z4R2txU2RjbzhTTVJvTHVTLVBfUHYxbnJ1dXJoWVpXRWJwNWFzRmZwMDc3VlB3OWwzNml1eVN1M21mbDJwWExNSmJRTkhNWE96TllQMjZIR3lISk9UQQ?oc=5"
-    },
-    {
       "name": "‘Some milestones are worth far more than numbers’: Pune CEO celebrates",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
@@ -422,11 +491,39 @@
       "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQMXNfc1BCV0pHQVZvVm5SZjBDVnk2SWVORTBvUW1jS2prVHVDZlVqakZ4cXdTdGZMZEFDSGdOdUxEamtwRmUzWS1oSTZDMFhQUW9fNmhZSWwwcjNhRTVPeTlrYmRwemVqVzFFVi01LTU2VmFLcmxBMFRVeVRSYTBtZEQ5LVVvZjRKSEwwZThlVU1XMndJd2tNbXpGR2hEYnNndnJ3STlMemRPakRkXzNOMEtzamJ3STliNzQ5RUtQeTUtWExTbTVOZGEtdlk3TXByaTdYal9obk0xNE1DSnhZeHY2elNMS2RzSFJvaXZDamtlM3dkcDFhZldZV0pMNHpCSHpaV0gyVGpDTkRsWVVwYjZpQUxBRmVnX0pjS0g4cXllRm1EbENVRE930gGvAkFVX3lxTE82ZGdQb0dtWXdMTTBVeGliU0Q3cGR1UDA2SG1NQWQ1dUJBSnZteThNQllsVXZpYnN1SkJnN2lpa2c2RFU0MUJPVmFRTnJnVHd2X2xIVTZudHZ4YWxobWV5RFBIMEhZUjAtNlJUeGF6M015b0xLUFZxbWc1WVBIVkpldXBkdjJjZWRuQ09MMmZTLUNRQk1ubVJheVM5UjdCaHlBZGFSa19MdDBTOXI1akczcGt4QjB5VWZSZnh4dG53eWNOZWdtWjFDNUU2R0lHS3hUS2g4RXZQbGQ0Z3FvN1ZlRGY5VlNBZXpQNkp6QUJuTjFfYWdHVWRlYjJEUnRBNmllM2gwWFRYbE1BdGRxVTVtaDU0ZDNKOTRIbFlYQ3dVUFBjamZ3MS1XY1pFcUtUcw?oc=5"
     },
     {
+      "name": "Indo-Asian News Service - IANS",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOV2ZiZEFGOVl3dHNQd1ltVjFHaXVVZHVEdkExQllQc0hvdTV0YXBKY1dvUGUtM3hMelJTenBTTWlkTktFN015a1pUbHR3OVRKaVM0LVc4THNkOUxoWjhwdTQ1NF9YZUVFU1V2UWN6a2dhdFhLeGdoaklEeG0ya19MZ0d1M0Y0b2FkbV9jSXBhbkdJUHd0UVRFcmZGa1hGX0t1S1gtVzBWcUVQZFpLdndRNUp5a3ZuWFNHOEN6X2ZMUGd1ek14SjRuaWdvbTN3V3pDWm9R?oc=5"
+    },
+    {
       "name": "Punjab govt launches 500 gyms across Punjab villages to promote youth ",
       "reason": "institutional, not a private gym",
       "detail": "public body, school, hospital or sports authority",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYWlXYTJKay1HNFUtYXhfaHlEVlRfbmlFcUJmRXpHWnZmTjk1YzhvdFJkeFNVWkM4ZV9rWWZ0SFdJOG9yejFhbkpUZ25YSGdaWThuSjBuS2hpbnlzcm44OFNNLVVPbnlVXzlhNzliR2l1QVpXMnFFcHU0N0pDN2N2SU5fQVBFWWtPdF9FMXVaWFh6SnZMZGtLb2lkX3l3dFpxcFhSVWtQTndvbVhyd29wc0NtQk92X1NjSUZMWlVzcVpSX1HSAcgBQVVfeXFMTlk4anl2VHJJaFowNjZUcVFsS3JYTmdSaFBuU3ZIWVB5Z3FiSXQ1bzJmbzZkYWtVNnI1RkMxMU1NZzE1Nko5X0R6YUx2OVlCNUN1LTdGTUUtTWJFVF9keXRTbnRZVkNCdEgtZE5ZLURjR1NSREpwMncwbkhiRXQyRlVtcXVHeFVLbWpFMlVObkEzb2FMVk9GVmRDQTVfVGgwRzI5MmZSMHFXUV9kSDlVaVZjZ3plWDkzNTdvdjNWREkzbzVxMGw2eEs?oc=5"
+    },
+    {
+      "name": "UFC GYM",
+      "reason": "outside Pune",
+      "detail": "no Pune reference in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZHNkbUVJbTdfSlgwSE9MaUc1a1luZm9IRHQ5cjk4QThvLV9xa1k3b2lleTdNWDVwZm93WjZMQWJUdUdkTG4yOXRnRDZDSnFCcmVja3RFcDVUZ3VUZV92dHlFTTVGRGRHcW9LRVhBRjdwN2kyZ2hVVzU2NGJRZ2x1TTlCZTYxdlZVLS1rZGMyaXZjX21RdjhiN3ZydlhKbFd3MnBiU1ctNFBEMTFWajd1dUxrZFdFUWI4RnBVblhvODlhVzFuWGRhM3Z1X2xfZWt2LXEwS2FSVQ?oc=5"
+    },
+    {
+      "name": "Inside Tanya Mittal Gwalior house with viral kitchen lift, silver uten",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxObEVTTVJJbGk4SUlMczlGY0wxZmpsbDhQemo3RkVSLThYd3M3MU1uSEsxa05nZlo1YS05UkpJRmpPSXdFMVlSUVo5eXN4aVZxMF9ENVNoMzFvdmpkeFNaekp4bldCNDRmNUVQMXNYU2cxQjVjNXFXaklqOE0wVkVkdTV6NmxLRnRqME9yWEE0NWg5dVAwakt6ZFlSeVFHQ2g1SGxhUjNjU01rSEx1bmlwOGZ0ZzBqOWw0RG9oRWF3Rkg4ZTY1RDA5cldHaDA0bWR5LVhxYXlZdXNUNEloSmtDSWh6TldjRlRULWdsRHo4ZmlMZDh3d010QzU4Y1VQTVd6TGpySTRmdjZwTFNyZjNIOElzQl91RmZUTjV0eVF4M1rSAacCQVVfeXFMUDZZV1JIMjg0S3BYSXlMbVhOZHBEendDX3hxcmpBT0NYS3lfWTdGWG52dk4tM21aYVhYSnpfRzllUFNlMXI1dVNpb1NwRmdzbmFoVDRwVDJtXzhIN1lOSnBTUjMzY04wQjVNaDQwa3p1eUt4UU92YTJoSFQzaUpWS1JXOFdWcXF5NHFNSTNTTjZNaW1yd2pVQWJfUjE2UUExZHo5SnJ5YkZRR2prMzlhUC16ODB4bHByVnkzTGFYdEhVajBsdVUwd0NiWTJCVHdkSWJweWd6ZWNIcEJNd0c5M2tRdXQtY3hUMGVzT2tUS2VGWFJNS1lpeGhJRS1ydUhHbWcxVE9PTDZiUV95TjJmclUyVFRybTcwbHNXM2oxVUhxX3RGNVBOMA?oc=5"
+    },
+    {
+      "name": "Apple Fitness Plus",
+      "reason": "outside Pune",
+      "detail": "no Pune reference in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQRldhWlJDdzhZVmNKdURUQlVlRWUtS25NMk5STHdDRjRTUTVPWEg1WUMwd0h0cGZfNXRfZ25UX2ZEbzRrRWJySHRhdDFyVTN3ZmtkNkxKVjNWazUwYjhOOU5GV1h6eHp3bjRpUnRtWmdpVWhqRVFYOXM0V3hIWkNSbXZPRTZKclZpekpHUnFxUXlyOTN6Z2M0WVVIaG1ERGpOcjROYXhWQ1g4X011dUhIWUhTTjl2aU5vNVVsYVJsMVNlZ3VMeG15anIxT1hLUHRuZFR6Q0FoaTVSUWFVbkFPRHhRQnpNUGNSWHkzLU5n0gHzAUFVX3lxTE1KdlA3djk0VDg5bGR4cW9YQWc1eGM0WDAtN3NqUVFHc292YkswYnJUQ012OXdpTFBNbVVyb0hDbElWOTVuSHJZMnZSQVRNT2VFV2E3RUNDRHpfTFViYW1iU2RiTTNtbU5qN2p5WGZmYU95RFVjcFJCWmVJNExrMjRhODV5LXBLYTIwUThtMmVLYWhJcS1BM0hFbjZiYUpaNlhoWktIZWcyNkVUODVfZ2UyTjMzV2R4bE5mUEt4WmZ2MVJsLUJad2I0bUE1X1R4cndrOVZSSkhPcHNKQldSM0tSZzdPYXpVMlFHaWxpcHJkZXhNWQ?oc=5"
     },
     {
       "name": "Suniel Shetty",
@@ -469,7 +566,98 @@
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNjVNX3ZqUDhVbVBndGNJT0drUFFJbV9ENDc3N2NNbGlUbkJRNVgyUmFneEo4NmxYUm5EZEZzU1ZVVUtYamdVbXhXNWdNT2lxT0VtTTVlc3dTbURQZnJQZG1Nb3VMTk02TVY4a1BGRXBmOHVHUF8wM1BuY1BDck1lb0Y4MTFVSjVLbUVTTHlLRkRjVUVyM2JTNmZVRE3SAZ8BQVVfeXFMTjJ5V0hMaHE2RkluLXdLZlVMYTJoN0phczFxY29uYk9mU0VvdnBuakNrd1dNRjg0eDFZaUF3UU9Fb1JFbVVtODVHWUZaYVhhMTVuWkdWc2IzYWtlcHlPMGdjYU9QNGJBWjczMHlLY3hfa1l0S2M5aGhvOXRVaTJqc0RQd3ZJaTlIaGxON3BIZzAxcGdrdVNkXzlmRUtYWGV3?oc=5"
+    },
+    {
+      "name": "Commercial vehicles’ manual fitness tests deadline extended till Oct -",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNnAzbDVsSEd4MTJKUExVaVJlVWdlSWh4c0otYTFjU0dmX0d6WGhfVncteVk5bHVxLXlmd2tYM0c0YlByY19iVjd3YWdmcHJnbkVQZTFyaENsZGprNnNHdWFxR0pPLVJmVXE3TGViUVgxcmEwM25VZEZBZ1o0TU9HWGk3Nm1GNk5pZDVpU1ptU2ZzQXdRajNpWUhJOHByS1FXN000aDJzQV9jLUR2Ymh1QzU0VHY5TUZ3ai1jV0JEZVHSAccBQVVfeXFMT2hMcFJBeDQwUWFpeWZCcWdpWVVLLXNTZ1JUTllNemM4R1dxb1pOU3JsWmNPTTJHNmM2UVY5SzBFdkxBME92cHZwMUE5YXBiLWpwbzJyZXBxMk16NWYzMlJxLS1jSkV1Y2RxaTUxdWVHOGpqNXREYlVGc0xUVTloNTh1YnRTQUZSREdCVDltVjhxaGtYV2Z6TkJLelllWVRHak5VbTRzbGR3dktJTEo3N2NoajRncTh5VmpYMnFrRUpKNmQtSjBMOA?oc=5"
+    },
+    {
+      "name": "JPMorgan set to open first new India branch in nearly a decade - The E",
+      "reason": "not a fitness business",
+      "detail": "no gym or fitness language in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNLWxONElJZmRYTEt0NF9FSDFqbC1tQ0RscXQzYXo2TVZFU1JCckFodHlJbklsLXdEMDBqdDVrWGNzR1JBalJpNjZoam45TTk3STM0V1B2Wlc5SEpfZ21TWXFEdk1qNUR5azVLOGVMU3U2RkZLdjdtVlRHa0VTcUduR2YyWVNHUk5zdGstN2J6empLRjNfOHlhdHNXSEJFNC1iZTZCbDVYd1R2ck5MTFlGOHJyeFN4bS1Pd3RKc2VjU21VTDN4WmxxcVJDbkpGRjlHN1ZwQkp2TVNwZ0Zfb3lJdWtHa9IB6AFBVV95cUxNVDRvVjNlMjR6TzFtTERGT0lqeVhCRFpjVTF4bDBqWWJVWFFJQ09RTTJlNXVCMS16amhKRjNpLTR3dkR6SFBidDIxb3JuZkxJamFVUndrTUQzaHBGM2FkWktqVnBxUkpQeS03alpsWVNEamJtN1B4NGp3ejRwT2FUZ3YxRmZTT3hBQ3JFT0ZxZTE4NkhtWEcxeXpSMktsMVJpdU9idE9sbVhJWHhpTGtMRzRkR0JRTWVIbXJuZDd4WnRqR3JHYUdQbmNqWnYtR19CRFBrZlhabmlqaGl4b3VLeFZoRkphX0hf?oc=5"
+    },
+    {
+      "name": "Pune Traffic Congestion Debated in Assembly; Ring Road, Metro Projects",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOT0pnanU5OWxiQUE4aDR2aC1FR2t5Z2F4bElJRTgxQ0tYd295VVJ5NFBPTW5lSzFFQ3Nmd2ZvbVlVa2FLejVIYlRNZnFsb0ktdnRocksxWjZ1d1A2UTdNWGh4eVNFaWR3VWpfU3JPNHowVTEtZDRfLUUyWkdUZXRpcjdVc05wNWZ6SU8yeVpEVHBqdEFGZ0tJ?oc=5"
+    },
+    {
+      "name": "Dange Chowk Tragedy Leaves Mother And Six-Year-Old Son Dead At Signatu",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/dange-chowk-signature-park-mother-son-death-wakad-police-probe/"
+    },
+    {
+      "name": "Shirur Truck Crash Claims Three Lives From Same Family, Two Children A",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/city/pune/shirur-truck-accident-amble-village-three-family-members-killed/"
+    },
+    {
+      "name": "PMPML Announces Half-Fare Travel For Senior Citizens From November 1",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/city/pune/pmpml-senior-citizen-50-percent-bus-fare-discount-november-1/"
+    },
+    {
+      "name": "SPPU Postpones October 31 Exams Across Three Districts, New Date Annou",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/city/pune/sppu-postpones-october-31-exams-november-26-president-visit/"
+    },
+    {
+      "name": "Renowned Pune Cardiologist Dr Shirish Hiremath, Who Performed Over 40,",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/renowned-pune-cardiologist-dr-shirish-hiremath-who-performed-over-40000-angioplasties-passes-away-at-75/"
+    },
+    {
+      "name": "PMC Clears ₹4.6 Crore for CCTV Cameras in Schools, Underground Cables ",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/pmc-clears-%e2%82%b94-6-crore-for-cctv-cameras-in-schools-underground-cables-on-katraj-kondhwa-road/"
+    },
+    {
+      "name": "Pune Swargate Mystery Deepens After 25-Year-Old Found Dead In Car Park",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/pune-swargate-mystery-25-year-old-found-dead-car/"
+    },
+    {
+      "name": "Woman Killed After ST Bus Hits Bike on Pune-Solapur Highway Near Kadam",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/woman-killed-after-st-bus-hits-bike-on-pune-solapur-highway-near-kadamwak-wasti/"
+    },
+    {
+      "name": "Bombay High Court Clears Pune Neurosurgeon In Live-In Partner Suicide ",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/city/pune/pune-neurosurgeon-high-court-quashes-suicide-abetment-case/"
+    },
+    {
+      "name": "Pune-Solapur Highway Tragedy: One Labourer Dead, One Injured After Soi",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/pune-solapur-highway-tragedy-one-labourer-dead-one-injured-after-soil-embarkment-collapses-at-rajwadi-flyover-site/"
     }
   ],
-  "ms": 964
+  "ms": 19844
 }
