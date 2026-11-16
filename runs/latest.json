@@ -1,6 +1,6 @@
 {
-  "run_id": "run_mw9ii0cq",
-  "at": "2026-11-09T17:05:13.802Z",
+  "run_id": "run_mwjhqne8",
+  "at": "2026-11-16T16:41:39.056Z",
   "scope": {
     "market": "gyms",
     "geo": "Pune",
@@ -9,10 +9,10 @@
   },
   "window_days": 365,
   "counts": {
-    "items_scanned": 61,
-    "opportunities": 3,
+    "items_scanned": 60,
+    "opportunities": 2,
     "rejected": 58,
-    "duplicates": 2
+    "duplicates": 1
   },
   "sources": [
     {
@@ -21,7 +21,7 @@
       "queries": 7,
       "ok": 7,
       "failed": 0,
-      "items": 11,
+      "items": 6,
       "errors": []
     },
     {
@@ -55,26 +55,26 @@
     }
   ],
   "ai": {
-    "status": "unavailable",
+    "status": "ok",
     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-    "assessed": 0,
-    "failed": 3,
-    "ms": 60004,
-    "error": "timed out after 60000ms"
+    "assessed": 2,
+    "failed": 0,
+    "ms": 34820,
+    "error": null
   },
   "opportunities": [
     {
-      "id": "sportsskill||opening",
-      "gym": "SportsSkill",
+      "id": "stamvia||expansion",
+      "gym": "Stamvia",
       "locality": "Pune (locality not stated)",
-      "event_type": "opening",
-      "published_at": "2026-10-13",
-      "event_date": "2026-10-13",
+      "event_type": "expansion",
+      "published_at": "2026-11-03",
+      "event_date": "2026-11-03",
       "date_semantics": "publication date from the feed; the opening date itself is not established",
-      "headline": "SportsSkill Launches Its First Physical High-Performance Centre in Pune",
-      "evidence": "SportsSkill, the sports-tech and athlete development platform behind the Chance2Sports Foundation, took its technology off the screen and onto the court on October 13.",
-      "source_name": "revsportz.in",
-      "source_url": "https://revsportz.in/sportsskill-launches-its-first-physical-high-performance-centre-in-pune/",
+      "headline": "Stamvia Expands Its Integrated Fitness Ecosystem With The Launch Of Stamvia Nutri Cafe; Plans Franchise-Led Expansion",
+      "evidence": "Pune-based fitness and wellness brand STAMVIA has expanded its integrated fitness ecosystem with the launch of STAMVIA Nutri Cafe, bringing exercise, nutrition and recovery together under one umbrella ...",
+      "source_name": "healthcareexecutive.in",
+      "source_url": "https://www.healthcareexecutive.in/blog/stamvia-nutri-cafe",
       "source_resolvable": true,
       "also_reported_by": [],
       "scores": {
@@ -90,19 +90,37 @@
         "note": "No premium cue in the coverage. Verify size and decision-maker before pitching."
       },
       "offer": {
-        "offer": "Founding-member launch funnel",
-        "service": "Digital Launch System",
-        "next_action": "Audit their pre-launch enquiry path, then pitch a launch landing page with trial booking."
+        "offer": "Branch pages and lead routing",
+        "service": "Digital Launch System + Lead Conversion",
+        "next_action": "Check whether the new branch exists on their site yet, then pitch branch pages and enquiry routing."
       },
-      "why_now": "SportsSkill opened or is opening, reported 13 Oct 2026. Founding-member launch funnel becomes relevant now.",
+      "why_now": "Stamvia is expanding, reported 3 Nov 2026. Branch pages and lead routing becomes relevant now.",
       "unknowns": [
         "Whether they have a budget for this",
         "Who actually decides",
         "Whether they already have a vendor or agency"
       ],
-      "assessment": null,
-      "assessment_status": "unavailable",
-      "assessment_error": "timed out after 60000ms"
+      "assessment": {
+        "buyer_category": "gym",
+        "relevant_buyer": true,
+        "event_timing": "completed",
+        "service_fit": "franchise marketing and member acquisition",
+        "why": "The text confirms Stamvia is a Pune-based fitness and wellness brand that has launched a Nutri Cafe and explicitly plans franchise-led expansion, indicating growth that would require marketing systems.",
+        "next_action": "Reach out to Stamvia's leadership this week to discuss marketing support for their planned franchise rollout.",
+        "unknowns": [
+          "Number of existing locations",
+          "Current marketing technology stack",
+          "Budget allocated for franchise marketing",
+          "Decision-maker contact details",
+          "Timeline for franchise launches"
+        ],
+        "evidence_supports": [
+          "Pune-based fitness and wellness brand STAMVIA has expanded its integrated fitness ecosystem with the launch of STAMVIA Nutri Cafe",
+          "Plans Franchise-Led Expansion"
+        ],
+        "confidence": 4
+      },
+      "assessment_status": "ok"
     },
     {
       "id": "suniel-shetty|wanowrie|opening",
@@ -118,10 +136,6 @@
       "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPY1lGZGwwR2gwU0RPc2R6aEJ1OU5rVlJtM1Y1NkJTWTRUVnNFNnhicUJoRFhYVVRRaG5INEJWc05sYnl1eTB5bUY1bzBSczYyZnpSbXRjZzdwTFBfVHVJMlRmOUc2OVlmNUJIMUhqcUhWSGZjcUdZWUx6WGk4M3BoZ2V4c3VjYWVUUjdlcWZMVEhqOHNpR0hycmJjRl9KeGMwamQ3OUpfUEZmTTU5UW9yX25aZXhENE5pcU5tVE5OYlpUT05hX3VQY0M4ZElTWDRnVGc?oc=5",
       "source_resolvable": false,
       "also_reported_by": [
-        {
-          "source": "aninews.in",
-          "url": "https://www.aninews.in/news/business/suniel-shetty-inaugurates-tungsten-fitness-club8217s-flagship-pune-centre-in-wanowrie20261021152746/"
-        },
         {
           "source": "tribuneindia.com",
           "url": "https://www.tribuneindia.com/news/business/suniel-shetty-inaugurates-tungsten-fitness-clubs-flagship-pune-centre-in-wanowrie/"
@@ -150,71 +164,45 @@
         "Who actually decides",
         "Whether they already have a vendor or agency"
       ],
-      "assessment": null,
-      "assessment_status": "unavailable",
-      "assessment_error": "timed out after 60000ms"
-    },
-    {
-      "id": "stamvia||opening",
-      "gym": "STAMVIA",
-      "locality": "Pune (locality not stated)",
-      "event_type": "opening",
-      "published_at": "2026-08-18",
-      "event_date": "2026-08-18",
-      "date_semantics": "publication date from the feed; the opening date itself is not established",
-      "headline": "STAMVIA Launches Flagship Fitness Centre In Pune - Passionate In Marketing",
-      "evidence": "STAMVIA Launches Flagship Fitness Centre",
-      "source_name": "Google News",
-      "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdDUtemZoQ1ZEODJvUzMyODdQbmM0VmRUYkQ0cGJjZGppZENtazNGdmtPMUJQSEpiVDJXeW1Nbjhmd19xczNuRUJzSGpHbzNtcGV3Sk9YakxadG1xM2lqX05Zb0RCQmJJQ3l5Y3hhcWF1THlRN0NyZV9mVVVDbndSOXlTaDRSd0RwRmRfLUVwdzlHU3ZfWEdvclJpVWZnTmZsRXljUExNbFFhaTNnQ3Y0Ql8xRnZObzYtaFpiLU9pdk5nRTk1bmZrUFZyLUtSd1FVUTRfag?oc=5",
-      "source_resolvable": false,
-      "also_reported_by": [],
-      "scores": {
-        "evidence": 2,
-        "timing": 4,
-        "relevance": 5
+      "assessment": {
+        "buyer_category": "gym",
+        "relevant_buyer": true,
+        "event_timing": "unclear",
+        "service_fit": "gym launch marketing systems",
+        "why": "The headline reports Suniel Shetty inaugurating Tungsten Fitness Club's flagship Pune centre in Wanowrie, indicating a new gym opening that may require marketing support.",
+        "next_action": "Reach out to Tungsten Fitness Club's management this week to offer marketing systems for their new Wanowrie location.",
+        "unknowns": [
+          "Exact opening date",
+          "Whether Tungsten Fitness Club is the buyer or Suniel Shetty",
+          "Budget or decision-maker details",
+          "Full article content beyond truncated excerpt"
+        ],
+        "evidence_supports": [
+          "Suniel Shetty inaugurates Tungsten Fitness Club flagship Pune centre in Wanowrie",
+          "Suniel Shetty inaugurates Tungsten Fitness C"
+        ],
+        "confidence": 3
       },
-      "act_now": 24,
-      "best_evidence": 20,
-      "stage": {
-        "tier": "C",
-        "label": "Stage C · premium launch",
-        "note": "Right trigger, wrong time for you. No case study yet, so this is a park-and-revisit, not a call this week."
-      },
-      "offer": {
-        "offer": "Founding-member launch funnel",
-        "service": "Digital Launch System",
-        "next_action": "Audit their pre-launch enquiry path, then pitch a launch landing page with trial booking."
-      },
-      "why_now": "STAMVIA opened or is opening, reported 18 Aug 2026. Founding-member launch funnel becomes relevant now.",
-      "unknowns": [
-        "Whether they have a budget for this",
-        "Who actually decides",
-        "Whether they already have a vendor or agency"
-      ],
-      "assessment": null,
-      "assessment_status": "unavailable",
-      "assessment_error": "timed out after 60000ms"
+      "assessment_status": "ok"
     }
   ],
   "views": {
     "act_now": [
-      "sportsskill||opening",
-      "suniel-shetty|wanowrie|opening",
-      "stamvia||opening"
+      "stamvia||expansion",
+      "suniel-shetty|wanowrie|opening"
     ],
     "best_evidence": [
-      "sportsskill||opening",
-      "suniel-shetty|wanowrie|opening",
-      "stamvia||opening"
+      "stamvia||expansion",
+      "suniel-shetty|wanowrie|opening"
     ]
   },
   "rejected": [
     {
-      "name": "Residents demand PMC to open more gym facilities during winter",
-      "reason": "institutional, not a private gym",
-      "detail": "public body, school, hospital or sports authority",
-      "source": "hindustantimes.com",
-      "url": "https://www.hindustantimes.com/cities/pune-news/residents-demand-pmc-to-open-more-gym-facilities-during-winter-101668969762874.html"
+      "name": "Get ready for three hours of morning fun, frolic and fitness in Pune W",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "timesofindia.indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/city/pune/get-ready-for-three-hours-of-morning-fun-frolic-and-fitness-in-punes-wakad-this-sunday/articleshow/97388598.cms"
     },
     {
       "name": "UFC GYM",
@@ -238,13 +226,6 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcV9PTVR0dXg0bEVfdXJ5ZEdJQmctSmpNc3pHTE9iWGRFbWkwZldxLXp0U0wzc0lFRkdWNEcyU041cGVRWTdFdm5fTkpwc1dONEtrdjB5dlc0SjBhZ2dzRWV4emN6ZGdhNVJVWEU2aVFLMkVKM29yZjVTM1piaXgwa1lneHpXS255dGtZRy1VWWpkTDl1MXF0czRJTk8telJGRXpv0gGrAUFVX3lxTFBCSFFnY3dFdWFWWjFMWldZeDFqUDhmZF94N0xXU2d1SGt3QTY0SmtaQ1NwMHB3UllMVElJR2VGMGFfSHp1LWZYMVBGNmM4ZDR6OVJBVlY1RzExUEd4Vk9RSm9oMjhTX1FVZHQ1ZlpmbHVScDFTM0hoRzdCb2doUWJpZnByRDF3bUFpa1dsX0xrT2dpdDJMU0tydDk4QWtYRnVlUEprVmtYeE1OVQ?oc=5"
     },
     {
-      "name": "3 juveniles among 4 detained for firing, machete attack on gym owner |",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQazVUSFJiMUNoVUM0amlyU3VvbVI5UkY0YmZydk1ITmRCWW5tX3VvYVRtNG9ZQzM1X1ZTbHhYc1gtX3h0aVZwQWgzNVJ5ZTNsd2FyMHBnSFp0S3hEZDR4SGgzS3J6Wk82M3hrMTZQN0p2MHJZNkE1NzRqX3hjSk1jakZabzd6clF0QV9hdWRsek5yZjVCOEdnZ0J3SjJzLU9aeG9UaTR5Z0kxdmN0MklXQkVWV3VFaUl1cHVQc2g3d29rd2trMzBQR2t2YXg5MFB5WWfSAdcBQVVfeXFMTmo4bVg5dHd2YmhYQWVwTzFGZ2ZLN01VN3RJMFVCMGNKVFBYczY3dWkxY3lSeldCMDV2N2N0bnY4TTJ5NHd3X2N2MkdBb2gtNGFGVlVvYW42UG1QUmVvc1l4UkxPajJnRTFFcDBlSVk5LTdZbWNWVnJMU1lHT2kxLTF5LTBYT09wdDRKdE9Kb3hPM1U5YTFqMVhyQXgxcTNQZGRwdW9qMEFXN2JXdktLX0dHdDg1S19nWTJVQi14eFRPUjlIOV9qVnh3M0dJdzBZdkhJVWhERTg?oc=5"
-    },
-    {
       "name": "One held, three minors detained for firing at gym owner - The Times of",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
@@ -259,39 +240,11 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOVNIbExQa2UwcmtvY0d5X19lNGdlUGp4QVhQa3hJQmtReWFTTW1sRXFlS1JyZmdmVWtPY2RKWkpleGNBLU44MlhnRkJEVjdodUhYSzlnQnBoQnhMQXFRNW1CMXd2ajV3UWRoYzN3d29XTGZKS0hscGk4NlcwZi13bHlzZnd5aG1OU09GSkF6X3dzZWJxbk9ONGFQVFJrLTA?oc=5"
     },
     {
-      "name": "Pune woman, 61, loses 18 kg and beats pre-diabetes in a year, son says",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNSm9uZlRuSDhIYXhWWHBMWHYzNzhQVGVNY1NmMEE1YWNlRDJCcGUzZFc0ZG5DVnBCdG80bFdOYkNVQVkzbmhTMW8zWHFacW9BVDVRdTRLTVNhaFc5Q3NoelJNZVpxOEJPZTRqUUJmcFNYdFNoTEcwRjdUN21UZnZvOG9GVFc4RUp3cTM1YzhuaDlvSHpWWFBQdHljdHpUdTU2QzFBMFJyMWYtcVhHcllzYVhvcnViRUwxeW5ZamIzc1pjUXVEVWIxQmxCbVVPT1RYY0RCNFE0OHF2dENwX1hkR0FnVHRMZzVE0gHuAUFVX3lxTE9KV1ZHZEp3ZDhwUDVXbmt1bXVNMlVCNGQzSTZkd2NPRmRfdDdtbVJsQng5ZnhyLVZlRDdUeTNRRzdiYkZsNUpaVDhDeGx2MVEyWTc2MmdSaGw1VWl4UmhhaUF4am9fbTk4S1ZWNC11aVZQaUFpRll5M3ZYQUtVRElWTktBcUZZQ25OVm43T0tybFItVjFvRXBhZkp5aHp6ZkpkRm1fS1NEVHE1MUZPSDdUTHBkS2x4bTNVTTBmT2RlelRoa2JoSnNsLVRmNlNqd0s4VWU0ZnAwMkFYNFVwRzFNUy1rMnZITmg5SEdJQXc?oc=5"
-    },
-    {
       "name": "Video: Assam doctor, 47, collapses during gym workout, dies - India To",
       "reason": "not a business event",
       "detail": "crime or accident report",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQVlZEcDNWUE04VjdRVXB4Y25zejNGU1BVT3l6WGd0N3lRTFlaSGRaQmFDaGhseFMwZ0Z6ejJhdHdQc1dlNTZrdUlCZEJJWTlWMjh3Tkd2MUl2U2pKX0IybG8xT0tRTE9vUVNaeDFobEdRb3pRcnhXci1VSkFPVWNGajh4Nlo4ZzZPbjFDTV9OWENFclBHc194ZkM5dzJ1b2dzYktSTm5kTHNkdjBYRVY1Zmh0Vno3aHJPaTZOMTVtam9peHcxZnV5REl6VEc3NnPSAdQBQVVfeXFMTjZhbTdSRXFjN3J4S3ZscDViejFQRFk5bHgzX1V2NDhhVXRpLWUxRzUtME5yNTJna3JKUDY3NTlhWkZNdjA1UktEYTc1UmV5NG5TXzBLMmVaWlNldV9TTWVhelRXaVVKQ2V3RGx0Y2VrOUNRRnp6ZXhEQXNxTlF4Z3BKOHZKSEV0LWtJaXRvSnJIMy1aSF9HLVEyLU5ELTV0aTg4NVdyMjZnU2xzQ1ZpT2owdDRob1VnUE9hdXNNOXZGVC0xRGxoSWk0RHhZTjFsMEFyYlY?oc=5"
-    },
-    {
-      "name": "Gym to Jihad: Over 22 cases since 2019 expose how fitness centres beca",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMndBYXd5Z0pHYjR0WjVtdVA3QkY2LTNEUDR5OU1SRVhjVTNRdmFwbWZzN0VjTERsaWYyajV2cmxrMWxrUUIxakRmR1NwSlp3SVBzemg3NTE2RVhPZEYxVGpQQlVsYlVhUDNiR190cjNaNUhGOUVqYzNxT2J5SHliWkREM1RJRkYtWGsyVHhuc09nTm40WTRNVEp6S3ZWZDlaMmFDZ2ZBVEdoUDVNVVU3SXVVUU5xNjhmWkxnQ3dwdGxUOVlZQk9pT1Y0c0NwbmFyNF9MSGZ4SlFiTmJXeERFM1QzS2lZLWs1WG9QemdqQ2VkVXVqdGfSAfsBQVVfeXFMTXFySFFvUHJqbEh2Yjd2THBVUFFSa2JnQXk0WEtIZ0pmZHFLRU1vdldkLURzWkRnVFk2U1A5U0ZLSUNHV0hUQjZhb3hCQUZDWV9oNUh4cmhKTUNtampuM2xRMmhlaFgxc0ZySjNIVm1idEowc2RPY1RuNG9FSnVqcUZCVW5xT2hYRHctZXp0RzFrdU5kaGdoV19qNGVhcnc2VXhfX2JnQjMzeDNVc1JaazBaNlFlQ2U2enJZNTJVcnRfS2prZXhza3JVRTZDTEZrc3BWZE02MUxrZlBoRzZzOWVuN1NUMnNPM1VuVVhCbDFfOHpXTDRUYnlfZUk?oc=5"
-    },
-    {
-      "name": "Gym told members paying Rs",
-      "reason": "outside Pune",
-      "detail": "no Pune reference in the item",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNZ2g1TnlRVDM5eUtkLURKUjdJcGllOWlJQlpFUEZESVBjVjd0RmNrQlVJUFhHeHhfMTdiUmtER1J6cmprcVF2SEFMYlc2eS1zcVdCNmJkRUNTRTZ1NzViWGQtTmhZRWhRYmw2aWVZdTAxVDRkQm0zMDh5dEJkYk9FUHNKRUpRNkI0WGdJNUtHdXJIcVhTTFIwX3pZN29sRWtPUGE2SUxBWjVJdWZOSHNDMEY4bk95clpxY1BlR1U4V1NnMDU2aHduZ2F5UDRQSzhoY3I1Uy1nNjMzaTN2WUYycXNpRVpUSnhTTWllUTY2a0xQcWJLRzZad25BOVd0OFlhcnhZTFZDTkVtVWJyM096MFl0dTJkbDA3Y3ZNSWN3TmotWUlUbmstbFV3?oc=5"
-    },
-    {
-      "name": "'She won't skip the gym': Pune man shares his 61-year-old mother inspi",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRmR3Sm0xUkpHUDJrS3AxbmhjREFUTjY5RlpmRVNmcXZ2RFBwckJFQ3Uzd2J5dERWbWxqVEVEQWFaUEJzR1loTG9LV3RFTlktUlpuc1JQRW03aHBzMGhTN3BzOUpyR0ZrSmF5NTB5eGkxOEE2V1B2Rjc2b1FJeGJBSVhNdDBnQXI3RGlwajE5MDBTUnpuX0gzM1dvZzN3NFNreFkxUjJGQ0ltTF9YNEtqMmN3c1ZLbC1zTzZYdFJ5em14VkwtVWpmU0U5Q3YyOXRwa2gwTU5IN184bVdtSWpvdElnMm9sSkJvWG5QZTY2b9IB9AFBVV95cUxPT2xtY21tdEVRazUxdnNMbjVYTWdSc3lLdGFseDlKWjI0Zjl2UkpkWlU4ZkdMRWFxZWJWa3BLRE94eFE2bF92SlhQSFQ4Rm42OHdsZ2NnXzRjZ3c0WWM5b2VmZ1hrNF9fNExaRGVXSk1Qdkppb25IVWJWZUwzeENLRG1nNWs4VmNlVU9fSnZwSkJLWER0T3JqSXdlNksxWjVPLVNvUlpFMkVrN2NoMGxYVXBOT0xiOW12Wkx4eGRKV0ZGNFczVzhRVXhCdWhVTkRoU2NoUnREQzZfeUtLYjdHcWVyRTluUHBiVTE1UEk1OVplZVhh?oc=5"
     },
     {
       "name": "UFC GYM",
@@ -301,11 +254,39 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObVdYUmU4dGs1YUhDZ0tRVzRFRTM1Qm12aVY3QW5Ed2ZFMHVIdFhGa0trRUJveUVHV2ptUGNrNmtoRkV4Zm1GMUdnYnlGVUdBaVllM3dzUEhNRFJpcWVhZ0MtdERSWlZQMmVCaDZ0N0tnTUt3b1U1S0hjc3VxZXRlU0JPa1J3TnVFVEptSGZlVmk3M01iUmdIbk9vRU0yUDVlR1oycjdZR2g0LS1ndkFJRkRUR1REbnhjVFVJSTdyb2RDZ9IBxwFBVV95cUxPQkxrd2dSTmlfMDlaMVE0RGxuRnBnTWFGVk1kX3hfLU9jNlJYcERkbE9laUpwejVtdlJfNEtLdW40Uk93aEU3Y0MyRnlPRU5wcFdiRTlTM1NFWWlKRzJOT01OSzhPa3YxZDFNTmc4UUJhQlkwYXZGVlNaV3EtTFd3bklNRXRuTk9jX3QzS3hfNFdlVWNpdkJnVE9DV2xGWUFiN2wySGZOeGlLUnBhemhJd3NKUzF1LV9vcHUxNzlIeHc5djVYZWtz?oc=5"
     },
     {
-      "name": "Wanowrie welcomes Pune new 24-hour fitness facility",
-      "reason": "could not identify the business",
-      "detail": "no readable business name in the headline",
-      "source": "msn.com",
-      "url": "https://www.msn.com/en-in/news/other/wanowrie-welcomes-pune-s-new-24-hour-fitness-facility/ar-AA2gcogy"
+      "name": "Bengaluru gym trainee, friends assault trainer after WhatsApp dispute;",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOOWxOeEpDVmN3ZE5ZMS1ra2NtN2tRTnllRWtjX0NpT0ZFUC1ZR3RaOEJlSXdFNVNORW1QWV9wSHhkTGhqUVRYc2ZnaXJNak9XeVRZTFpUcjlEZllFQ0ExbjlCallDYUFRRWNqd2tYVlQ0ZnJyZEE4TkVRQ19MUWVwMDJpU19BaVhYeV9CeTBJZ2l3Zzc5WnpUbC1OeEllUjlJblBkZXpIbXE1bmV2bGYyZng2S3U0R3hMVTRPNVA0YnhUcHZpVmdlbEpRd3dNTUh6SzF5MWlOMNIB3gFBVV95cUxNYTJza1VOdERMQVVCSmpUa1cwbHc4X2dkRGV4ODlwcTZOY2p4RmhBdjFpUzRlSlMwR2VHWVV5R091ZG44MzZ6dEtuUXRoSmZwb1JCZHFCOUhiQm1JYWZwaWRXOWhpa21JT29BbGE1NEQyVk00dTE2ZjlhSlNKaDhtS0lIWWxVSkQ2RF93eVlSNnVSRGg4bkNqYnF0NEI1ZW53Mk94OTVrVHVnbUpQRl9Zb1ljd202SGVxYW1uYWZwZThuR05oTkFJclJlWTluRkVRRV9DcDFDMVFudm1nclE?oc=5"
+    },
+    {
+      "name": "Gym owner injured after two men riding a two-wheeler open fire in Pune",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQa2s0NVF5ZmJhbTBaYkdBQkRIYzRzNFJHbnBrQXNldUJuRk5fR0JDUjFLSDIxS1QtbGl6cGV4UTYtd1J2V1A4YXRQemd2U29vbkhhalc5bXdsVGEybW9XSDllcFdYdVlTOWJBTzVJeThlS2xPdzhoT0NjZ3hRSnBLd2ZybHFRQkUzbTRPZk5fdjdnM3FCT2YxbVhtNjcwYW9ud21qWTZGNUdfd3dsLTgxRDJOZXpsU1dsTlJHQXF1NHhPZS0zcWs4aktuOXhhSG1sY3REbFloS1AtUdIB3wFBVV95cUxPZ0JGWmVCb1ZSSkp5R2JTMnhnMGE1ZmU2ZUJJRFhRUWw4dVh3aldNYUVGWm1EYVdiLU0waEt2Z1N5eDJkQXF2WnhrVUJoNmY0cW5jZmpDVDA2YzNBcU9NeFA3UVJJSmVfRGJUeGhsVC00UXJEUl9USzJQVEpIbEJMVnYyZWVpbTNsUHowM0FfVG10eU5fbGp2TjNLeWxELVdnY1Q4ZnhwNFFscTFtZk0tTjRWRjZaLWRXamtmU29ZN0NaWjV5VEw4UDlfYnpXMnF1MmJsRzVhSjMyY21VOW9Z?oc=5"
+    },
+    {
+      "name": "How ‘gym jihad’ added a new weight to fitness centres - The Times of I",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQS0l1dXhIMHF3aWhocUFVZkRsZVhnWUZ1a29BODZpVjZ6dU1hUTRjc0NKLTlfSFRqclFQMjZnYm1UbEN6MDVwX21MQnE0VDhWM3VOOEVLc1d6bHV2VXl4NUQ0aFV0OXdxendwNnI0Mk1FbGJVVUJnbG8zSHI2YnYyeXNiaDF6cHRHTTJhc0hCUlpWLVZWSE83XzFiOUZ5VlJNTm4xNEFjWWFZZFhrWXVVRENSakFEc0NNd1V30gHAAUFVX3lxTE1ud1FENUJ1MVFmcVdXUFBOUUNHUVEyRjF5X1RaZi1JWV9lTFp6NzRWRGNHYkNnQXZwM2F3SjdydHJMU1RXOWFIdXNqRkNGTEE0Mll4dWQ0RFAyRkNSbWxkWlEyaWNYbEJZanpyZkZRazBwZ3otblFBUURDZjRYbVdtaWgtVV9qX2FpdGJ3dEswcDdhV2VteEtvNE1UZHVybGtKcHFrVjRBN25TQ3QxM3RUek9mcFFtaDRjTEJxRENyOQ?oc=5"
+    },
+    {
+      "name": "Mirzapur ‘gym jihad’: Gangsters Act invoked against 10 accused - The T",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOemZteFFBS2JrS2hnRWJQbzF3WDRNOVlaLWkzb3g3ODl5MkdlX0kwTTBteHpPRTRUTnZERDBPSEgtLW9VblRsRENMSVdJdVZDYWQ5ejl0Ti0zWEFFMjRSRlBtZlJaX29Dd1ZxN2l5MjIxQW9pQ3RVZ1FUbWZhWjJyNnZjS1F5VFFUTGoyeGdBN1JXN3FoejhZbGdES1FKSE5VQVZJd2dRZ0RFU1JfZjZWdWNZNjQyMDlhWTJfNkxfeHl5Y01fbDBKSTNMc2JSSHpZ0gHWAUFVX3lxTE0ydmJzQ0w0NVQtMVdKVnFnR3RlVTN6Z2xmd0UzVmlQNjJNZGpCenFnVm5yeVVhTWt4ZDdsd0FKTjlSRHBlSWJqVHNxOXZmeDNjRkNNZWduTlV1WmFjR183YmZxdEhkc0JfUVR5Z3dUVTlkWGdNMVo0UjFUemlqQ0VibVZ3U0pUa1paSjhGUXlnaS1pUDFxdDNXa2tvOGNRa1Bxa0xlODZrcnluRGZ0RVZuLV9FNXZVTjRPN2hfMldWVWhOVWF3bXQ2aE1pN2ZSRVBiVUJKdnc?oc=5"
+    },
+    {
+      "name": "Gym apparatus firm loses ₹50L to ‘boss scam’ - The Times of India",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQODlhRnE5VjFPeGFDd01aQTBBakpCYkhZZFh1bHp1dTlZM2hZNi1xaUFQU2N6OW8yeWVqT0dUblVrNmtWY041ZUpkSlB4N3VzWkROanVQTk9UbjhpMkxkN0Y1LUcxaHlUOHQ3RzRzMC1tcHc1SG5NTWpCQkFGTlNjNUdYVERMVXlsamx1VG1XQUxyTW9uLW8tUFdoRThhbVJjY21ZeEpZcVVURmlJOHlPeDUxa9IBuAFBVV95cUxQNUtfVVZ0enRRZ1JicEg3N3hYTDRnbjBoOElVdkl0RG1JaUJCVUdXbGpoNjRGZGlOSnNTcjVzUDNIQnVleWVpS3R2QmlFbTdYY0t2VEkwS2VOdk5qUTdWMWE1MG9fbVhJZkhyenJVT3h0VWE3Nkt6ZTM3bDVEbjBxY2RXdE9Uc085SlhBbVdiWktjdjM0d0U1VHpuQTRaamNuaHAyemtINUxPRmtBcEwtaDQxZWc2OERC?oc=5"
     },
     {
       "name": "Gyms, trainers offer discounts for all to help meet fitness resolution",
@@ -322,32 +303,11 @@
       "url": "https://timesofindia.indiatimes.com/city/pune/roadside-gym-built-by-damaging-footpath-opposite-pmc-run-facility-pune/articleshow/106364465.cms"
     },
     {
-      "name": "Gym owner injured after two men riding a two-wheeler open fire in Pune",
-      "reason": "not a business event",
-      "detail": "crime or accident report",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQa2s0NVF5ZmJhbTBaYkdBQkRIYzRzNFJHbnBrQXNldUJuRk5fR0JDUjFLSDIxS1QtbGl6cGV4UTYtd1J2V1A4YXRQemd2U29vbkhhalc5bXdsVGEybW9XSDllcFdYdVlTOWJBTzVJeThlS2xPdzhoT0NjZ3hRSnBLd2ZybHFRQkUzbTRPZk5fdjdnM3FCT2YxbVhtNjcwYW9ud21qWTZGNUdfd3dsLTgxRDJOZXpsU1dsTlJHQXF1NHhPZS0zcWs4aktuOXhhSG1sY3REbFloS1AtUdIB3wFBVV95cUxPZ0JGWmVCb1ZSSkp5R2JTMnhnMGE1ZmU2ZUJJRFhRUWw4dVh3aldNYUVGWm1EYVdiLU0waEt2Z1N5eDJkQXF2WnhrVUJoNmY0cW5jZmpDVDA2YzNBcU9NeFA3UVJJSmVfRGJUeGhsVC00UXJEUl9USzJQVEpIbEJMVnYyZWVpbTNsUHowM0FfVG10eU5fbGp2TjNLeWxELVdnY1Q4ZnhwNFFscTFtZk0tTjRWRjZaLWRXamtmU29ZN0NaWjV5VEw4UDlfYnpXMnF1MmJsRzVhSjMyY21VOW9Z?oc=5"
-    },
-    {
       "name": "UFC GYM",
       "reason": "outside Pune",
       "detail": "no Pune reference in the item",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMmpHZzFzdDRtSndhaGoyUTRvV1E5eWVRLXBmTjh3bFFmTHdaemptcXR3Qm81dk43LVpvWUJEd2tqMF9jYnRmM3I2aTBsQTh6WUY0SzQzOXd1eGp3VnZDVnl4eVV4LUZMLU4xMnhYcmRGUHhjUTR1djkxTjlJaFExcUFhektIMGpDeUlTenIyNVl6M3p2TlFxZ3ZEd0VUdkR6NG9reVdBLW0yamMwSVMxbjV4QWh1Y0lJdUs1QWtxQzFSemk2amd4YVVoMERpa3ExWkhnYlh3?oc=5"
-    },
-    {
-      "name": "“Islam-friendly” gym in Kerala Palakkad? No music, separate timings fo",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQbFlCc1Z0bU1POEZ4UzJaMlJwbFJvN0N6S1lKSERYNC1EX2Z5SmdUX2M1aFhJemh4Y0VaaGlyWFp1X184ZGJOVGJJU3R6U1dvOXhQbjlVY2FXYXl6STN2cHZPS2I3V1VldDZxSXdlUXVCS3RacVhqRzJsSWFoT1NHZmhDSE93c0hsYXk0MDFTT3RGb3gyRWplYXNYVUVreWR3S0RRLXJrbEJvQ3pxX2lnS1EwTFltVG9oU0hSZHNBN1RINTNZX3c0eHpkei11RWg4RkhqU3dGZlpkeFVJWjBtN1hBZkptLVZIbUJnekJ1S0dXbVBYNFZ2YjBCZHNXemNiNDJyYmkwR1pITmtwcllpc0ln0gGXAkFVX3lxTFB5Wll1OTZXekc4VUJETUQ2S2FrMTdyX1VVMFZQYmRKQTViS0NMNGhnY3N3VHB1RUlKOWYwUTk4ZGhER1g0SlhkYUdRQlpDZXotTExpT2ZzMDZ4d0VibFc4ak1xVVlvVlpPTWJTbUhNMWNQdVA3UUd2ZnlzQ2ZtYmVWcG1TV3hyby1GTlVubGIwY1FJay1BVkczaEY2RGstakYxbWdQZ0h4eGliVUlwalRtQzJZbXN2STZ4Rzc0SWJSYnh6eWhWSjc3OWQxbzhqX3NsRGxPR2lWR2lyc3dFR2V6SVNTOEJpTTQ0YXVmZnV5WUhaX2hkY2haY1VUUU5xNkcwcG14SHZUM3E2TWpVVHFYZjhQd3RMaw?oc=5"
-    },
-    {
-      "name": "Honey Singh latest gym flex has a lesson for everyone in their 40s, sa",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNWFJkdWZScXdLU0tfV0w0SXBOV2tsTUNMZFZGNVhoX01oNEczb0s1d1Z4UUFfa0JUT3JJQjdSNU40TV9Ic3kzREpNUEhOM0p4ZG1STnptY3JlWURSVXVwOThYYzZ2WWhXQ0tuRjVjNVJET3EwMW8zYTlWeHdNYVhTXzZ6SHpOWnBPaWkxLWhOeng2bTNHeE1ueTNjdTFZaEJURUdpYWhoc2MwQzRzSjNSN3JTUjc1RVFPSXN0bTh2c2FGOUQxVFJfUk9iTXZvWUN0bERUdU9uN3pDVG5BU0FlWl9Qd3ljQ1dYQnRR0gHyAUFVX3lxTE1PSDBJWUNzN3hBRG1TMGN3LXF1ZTY2Yl92ekZVdW1lU3F4b1hKbDduUkI1YnVONzVhbFNrX3lkNVRxNTF1Z090YlJvcTZ1c3ZQMUE0QUdfYkhnanBlQkdHSUx3dm5KNFZSYmY1cFV0aWl1alJRTlVCQXpoekFhYWFhY3BuRjRWejhTVy1OOFFqM1NQS3BOSkRDOTV4bjlkdlpqZ0xjbEdKVFB1U0ZMM3dnYkxJWkFmR3FiaGlGY3RvVWctbHpHTDBYZ2dXQi0ydEFrNXVwdVRQbnlKV1FtMlVLOW85NTc1Z0U2NFdLMWhHcy1R?oc=5"
     },
     {
       "name": "UFC GYM",
@@ -357,11 +317,11 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONHlRSDZOMUhYTkhoUjMwUUduN2J0NGhybGs2WUdoalhIWjFob0dpNHJCNGtsZjY4bEk2YWJVblVISHM3VEgtNDFQVGdNSlcyal93c3hjcEg5N3U0cWNiVGF6WlRRTWRHZElLbEhMVTRhVlFsNGFVQ1FMb2R0S01Gdl9lUVpqU0VsMWl0aGxweDRRSlN0YjlYME1MR05FSUw3ZTM2Ty1yUHBab1A3ZjB3YTN6a1hiSnZMRXYtMWJjUjN1S0HSAcgBQVVfeXFMTUZlMHYtNU1ZVE54SmRTR3FpX2xnTlZQRWlVbC1EVGQxNW9zTEJtNDlHNzVNS0JPQk8zcm1adHdqdUplNDJCNGlmSS1EV0ZOQUhjUXRvUC00ZnhTYkxUMGV4QkdZcmxab3JPaEhNR2FmTnYwemNoM1hjdW1xaEhoZmVuZ3RxbnVrdlJoNWhuV0lvTnlLTEZia3EwMTk3QUpfdE1oQ2VjaV9DUk9vU29WMHlHUWZRVmFTOG1pdmJMMG10Z3JQTEJMZXA?oc=5"
     },
     {
-      "name": "Pune newest cocktail bar brings a bit of Hong Kong to Baner - Condé Na",
+      "name": "Hindutva finds a new target – ‘gym jihad’ - Scroll.in",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51bDJUZ1lwZ3ZwNkIwSjNGWE1Nb3dRWFhkcjFxWjQ4dHVBYUlZNlhQbElFdE10Z2NWTG42elE4ZWZ6TmRzMF9IZFVVQXBjSTIzTFJyVmtqVnpDdlFaVTZMdW1LbHdiUlU?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAyUnFFb0dfU1NUWEo1YVlRWVhnV2gtWVVCTDZfekZVZ2Z6bUJZSl9BR0FxZDhCVVE5dTNNbXBLZUtlMkctUk1qVlJUdC05cC1SQWwzYV9pWUJiN2dHcUE1YlZXakozMzBVaUdmbURjdExWeE5aYzdCWjA3dw?oc=5"
     },
     {
       "name": "'Islam-friendly' gym in Kerala faces massive backlash online, owner cl",
@@ -371,11 +331,32 @@
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPZ2hOcWVFSHZSNnhOMVE0Y2hVVkJjUGowMWtxTGltbGtlSW1uMEdoMnZhY1F1X0ZMNDlHU0ZGdU1mQjBXYnRwRFl5WTQwbG0ySGJ5a1RPVjhMMWxianBhUGF0N0tvTndzbzRteEdmQWFFb1FBX2c2Q0hOaWQxM3B3RDM4MFNpUnllMVpJOHpZLXozalZMMU94QXZhQnpZWTVxb2NaMW5GNjduWFJ6cHptWUFwcERBbVlXaU9YdTVnT1NlMlhLSmdXWFlWazV4ZkoweFljbVZIRUlPem1DV3BRNDhObkg1MDk2UXhJdUIzOG1YQdIB9wFBVV95cUxQNWZlbUpwSk94YW5ETFRsamtkNENpbU80cl9Hc0wwdWEzczgya1dLaHJ4STdhTFZWako0aHhJNnFrMDAyeG9lTU9VWk5ZRGRxS2s5dE85dnZaVjRJME8ydkszMWtDVUZHdkh3MjFZVngyQ3dfNUNSMW9lMFVCRnk0eEw0SWxqZGJTX3pZMHJ5UVRUazdJYUFuNkxOclczOExEY2R3OUZmblJsUGdGTjhnYmVHUGU3N1U3TVNTdE1pR0FmQlZxUlo2cC1FTFhPT1QtRlNIc0hDMHBpMEFpOU5QbXR3UldhX2liUVI0SWxqSFFGUElwS1dv?oc=5"
     },
     {
-      "name": "Pune makes room for round-the-clock gyms - The Times of India",
+      "name": "Pune newest cocktail bar brings a bit of Hong Kong to Baner - Condé Na",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZU5lRkNrN2sxdnh3bWtkTDBFTEtCaVVQOWh2dXJEWkFZYTlsdk9mYUxydjREcEp4Rmg0U3lRbWp4Q3lRXzI4SENzd2VKYzhuaVhQZjAzcnVVR1Z0STlFVEhjbmFFM1RrRi11WHBxeW5aYXV4VWE4UXJta1JsWjdEMnpVazBWczZlYm5ZNmlrcVV2QW4yY0dJTlFJdXZQN2s0V0hHVkRrUkdKRlUtaURVOTRn0gG3AUFVX3lxTE1sUE9MRlNaR2kyaUFHQlEweUtVNWNKenJnMVBQbEtPNkVBZGlwZF8zblI5VGJLZUVHX09qbm02OF9TQVVXRWFheHp1cDByVFVSMGY4allzSUlKdGt0TllwS2NlWnlxLUxXejFVZWZFdjFsZjRiMzZHeWRfNE1zWDhfY2o5aE52aWpScWVjeFlEVjdxWmFLUjVXSVNBTi1wR3gtOHNqTDhQenV4V3ktVEFrZVpwY1g1cw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51bDJUZ1lwZ3ZwNkIwSjNGWE1Nb3dRWFhkcjFxWjQ4dHVBYUlZNlhQbElFdE10Z2NWTG42elE4ZWZ6TmRzMF9IZFVVQXBjSTIzTFJyVmtqVnpDdlFaVTZMdW1LbHdiUlU?oc=5"
+    },
+    {
+      "name": "Not the gym, this new health community is a WhatsApp group - The Times",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxOS1JwaGtCaW5LZkV5dV9tS0JDM0tXSmIzNHNwZF9zTGthb0N4UTIxbUJVOXlIQy1nc1B1am5Gd0hteThzcHBHUmRNYmVZazNmMXMwa3N4QjdjTzliTVczVmRFUWhvZmFUYW1HUlY3WUNsd284V2Nlak9TV0hOcDUzR3FkRGowT1V1WnNlUG1fVnRjLTFTVXJ4c3RLUHdCSzZzY1I5UktjZnJtcnFXZmNIWUYwbGRoWXRFaXhTVkZtTndETXRLZjdWaElYampOUkVlVVhyRVl3blF1Rld1R2xoVFU5WlZLSHJtUHFhRkNzN2pXWUVOUVA0ZDhJcTgxWTRjaUpRbnc4Q0dTS2U5VU9JdDhVdzB4MGNjNDRKSGpjTlllZUZwenlFR2tNbEZoM3U2M1JkRm5TdXJBeWlFdTV0S0R6VWxGU1pVRmpDd09VOG9UbFNNLTJZ0gHcAkFVX3lxTE5XRWtpTFFMSlRCZ05XOXR4WllhMlFOOTcyWndNM1V2dXJNVVJmenBGUk9fOXhkUXpBLUU4VnZzT3gyTjZkM2t5X0w5YkRQZWJaYUh6alM0SkRtel9CdWUyZUIyTUtNWERFamh1V0dCSW85Vy1BaWpxMTQzdGlDSHFlZi12SzhmZEFrclhDV01OUEpXdmlmWWFKY2hWRWVfb3ZaeG43VjZ5TFhQU1BzNTlNR1JYeGE5MXRqMjdBRjVFOEM1X1lQY081clFleXZIUW8tbEl3X21oVHJMVzJocV9SRmpzSnAzanlvSElhbTlhVmEyc2pEVkVWUkpiRmxCN0g5R1c3TW16RmxQWVlpUDhsSVRhVTB6R2FCYnpOU09vQXVXei1GMEFwZHBDeTJnZkN3bmFaM2JCUW1ZU09IeDFDUzh6eFdCSWk1ajZ6WmFzSUJ0UFhoNkpqcnR0Mg?oc=5"
+    },
+    {
+      "name": "Women gym",
+      "reason": "outside Pune",
+      "detail": "no Pune reference in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRVNscHN3RTZVS2N6RWdjOVdBQV9Rclc1WTFzTGJOV0l1cFlVSU9RWkxHT1Z3NzZRX2ZaT2pQN0NIMkRISXRHUzlWTzlYWXJnUER6U2N1Y2hwQTUyRHgwVlBwMWhfeXNWSzg1VDdmNzUtX3FiemlwVGw4RzI5WklfUXBsdkcyU0dfN1NwYUF5UWFpclowMWRMTHl1Szl5QjJKNTk2c2lsU2hrMF93NTFxRkxUWGpubVNFTThJ0gHAAUFVX3lxTFBRaEdRV3N4cnYxZFZkb2NJRnF6eEljRGNPYTR3b2RvbGRqc05EeGN6YWlJb3lRYlZsUXYtelhYM3hOcVBGU1p6SjVoaFR3ZWJzNW5xN04yZzNJS3NRSkFvMXNtVFhfcDIzZmwwNUJnSWMxSVVrWUJBWkhidW9GWldGRm1JNnFMMHh2eUxyU2tmbDE3WUpWRE9paHZGSS1zTzZWMnlnN0RKVVZtQlJwU2JHMlJObExjdEx1cHB0Qk5YaA?oc=5"
+    },
+    {
+      "name": "Stamvia",
+      "reason": "outside Pune",
+      "detail": "no Pune reference in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfaTBXQ1YxdkcxRk5vNDIxemd5Mm9XM1lORFRIUkpLX1hPWTBWTkZiTWlkTUs3YkZ5SmdObXBwN01IWVpLTG8yYmgwVmhrQVVMUGxVeXpySkJmOHJ3OHloYmx5WnJnQkp5Y1E?oc=5"
     },
     {
       "name": "Paranjape Schemes launches Promenade Residences in Pune - Construction",
@@ -383,6 +364,13 @@
       "detail": "no gym or fitness language in the item",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaFRMUTdHNVRzMExzVXV5VnIyOU9kaDBPSnhNM2VjTU9MbTdfV2FfaTFWUUR3UUE2Q1UxcHlkTDBjSElBVy1EX3VpeUF2bDl5N3l4dFpvdW9SNDVLdlRtYkNldU9QNFJfX3NTM3FDNFo2N2tYRkZLWG9teDJscnRyTWhDN0pYS0ptcXJCSFUxZUJLRjNjdU83dWZxRVY3V2tzZElqVg?oc=5"
+    },
+    {
+      "name": "Pune makes room for round-the-clock gyms - The Times of India",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZU5lRkNrN2sxdnh3bWtkTDBFTEtCaVVQOWh2dXJEWkFZYTlsdk9mYUxydjREcEp4Rmg0U3lRbWp4Q3lRXzI4SENzd2VKYzhuaVhQZjAzcnVVR1Z0STlFVEhjbmFFM1RrRi11WHBxeW5aYXV4VWE4UXJta1JsWjdEMnpVazBWczZlYm5ZNmlrcVV2QW4yY0dJTlFJdXZQN2s0V0hHVkRrUkdKRlUtaURVOTRn0gG3AUFVX3lxTE1sUE9MRlNaR2kyaUFHQlEweUtVNWNKenJnMVBQbEtPNkVBZGlwZF8zblI5VGJLZUVHX09qbm02OF9TQVVXRWFheHp1cDByVFVSMGY4allzSUlKdGt0TllwS2NlWnlxLUxXejFVZWZFdjFsZjRiMzZHeWRfNE1zWDhfY2o5aE52aWpScWVjeFlEVjdxWmFLUjVXSVNBTi1wR3gtOHNqTDhQenV4V3ktVEFrZVpwY1g1cw?oc=5"
     },
     {
       "name": "Shapoorji Pallonji Real Estate Bets Big on Pune, Launches Third Reside",
@@ -399,25 +387,25 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcVkxQS0zMzFGdjhSRFRSYk16XzU5M3Q5T3NncGt1NW5iWUpNMVFMQnBZb2FxcENKWkc1aDc5cG5Gb3YxTVpFbmJuVGZ1YTl0UUR0aTBoS3VEeFhRbkZQdVFNejdrYTA2WlE5V2NfV0FCbjZSV0l4UGVJV2l5dURaTlRRUG90MU82WFAxTmtmR2FIYXpJV0tnMDR2RnVaRF9FM3dQakRXVF9uOUotUXNZaWQwcmZhOWZDODJjZU9YSmJPRUHSAcgBQVVfeXFMUGxXWTVkVTlHaXNNNEltZ1U5bENzNmtXNTVvRnlrREtURGp0NkE3dFFkOWppN3lRNlVxcE9naWNxUUtBellzLWNFMF9YU0dZRGFnVEllMHN4X0d1ejVieXdRX2tVX2tsbm5EM1RUVlBBTGFyTThrYUwzWWUtQXdGUGN0ZHhpcG90TU5fSmFRaVlTVWFiMEs0MzBYZmZ5U0FhN3NXcGIyeVdBajBCZ2xmdGU0bnpFY3FVbGpOaFBrZWotVkhHR1ZobTY?oc=5"
     },
     {
-      "name": "9round",
-      "reason": "franchise branch",
-      "detail": "the brand decides software, not the local branch",
+      "name": "Jetts Fitness Unveils Flagship Club in New Delhi - Local Samosa",
+      "reason": "could not identify the business",
+      "detail": "no readable business name in the headline",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQTRyb1ZDbEJnSnNaWkdGd1dkTGg4YnNYZEZmeVl4RGhoem84ZHNrRVNTSEtYRXNoQlJMX2p5Q2djaXJEZC11dk90RVJISF9KVEgzWWVoOEdaYkhLQm9WbkdKeGdGb0NCTVJYczZLdnNyOVQtdjlkTVM4NDVOSGM3TUE0aERqNkRTOFZ3ZXlnMUVqTlVNd1U0SWR3VWtWckhIRUtj?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zWEhOc1VFSnlNUkl4NEFpb0RGd0lsU1lnZTkxVFBLbGViUlNYQkt4Zkp6eFk4dlJqX1BqVTZ5OUhoZFlGazhxU3o2eFd6QlF0VXVxc0FWcVEzYVUydUlrMmVBc0dpcGRDc1lxekFnaGliUnVaNVJ6bkNCd3fSAXxBVV95cUxPM1hITnNVRUp5TVJJeDRBaW9ERndJbFNZZ2U5MVRQS2xlYlJTWEJLeGZKenhZOHZSal9QalU2eTlIaGRZRms4cVN6NnhXekJRdFV1cXNBVnFRM2FVMnVJazJlQXNHaXBkQ3NZcXpBZ2hpYlJ1WjVSem5DQnd3?oc=5"
     },
     {
-      "name": "Forget treadmill and strict dieting: Pune fitness coach shares fat los",
+      "name": "Vault by Virat Kohli Enters Uttarakhand with the Launch of its First C",
+      "reason": "not a fitness business",
+      "detail": "no gym or fitness language in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNc2FodlN3WWVWbXJ2RGVZVUV6Y19VZEY0dFFrZUY5NFhXaVpRNEJoaFJzYXlQazg1N2JYdmFMUUZmUlpaRE8wTjdwX0dUVGtFUDJyejVDX2VyZExfZWlWNDUyV2NPTzc4MVQzV1Y4algzNG9udkdWckh5MUtVQkE0MzJTNjhDQ3ZURFp1Znpuakk3Y2kxNDNBRE10UEhCajlQc2otb1VaTHFkaDVRcFdTaG1Rd2ZFYkIz?oc=5"
+    },
+    {
+      "name": "Yasmin Karachiwala Brings Her Signature Fitness Experience to Pune - A",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNaGFIWnFqWjNVRjZ3eVVueFhONk9YRm1MTTRaZXBOLVh0SzNUQlFpMkZTSzVJa3lFQTlwODNUNnRuQ005a1M4ZktFdnlWTmVkSDJOT2lXWFJSNjdBSWRHa0JWRkxFTmtJQ0V2cjlNZm9oYTN1dm43cGxhVHppSnI1SFZMWF92eDJ5ZG5BeDBoVkx0NXN0REVnazVFM21Dal9TQTUxdno4NDlUUGw4bmtlUnFYTWxjYTU1Y2VNamlnTnVCZ2ZHYzFhZnpKSkFjNVN5aDhVSXRxa0hLVFpFS2tIZjRtMU56Zm9pVTNrcTEwNS14QWwwbHl4UVFCTUVqMy04em5od005bGhndjdMLXBidy1B0gGXAkFVX3lxTE5NbU5ENUxNenlpOTJSLXlwUXdxYi1vblBrbEEtZkhXN0VxVEhrOTZoQ0hWbEdITDQwOWhLV1dDVXRGMXlsT1NNMkRtSElrSi1uT0FxVzhjaTgxeUxrNkRHa2ZRa25HeHp5eWNyT3FPdVI1dXBPcUwxMDVHVWRvbk41bEtpcDZxTFhMV2ozRFNKNUdYeldKN1B6MWFVelFzenI5TTFyWWpEU0ZFSVdWcTBkUGJ3elJpVk1UX3dSV3JZcklkTkhhcFkyb19sajNrVVJsMDliQVBPVDAxcnRVVldBd3BSLWZ6dTdsTi0xSm9heUhhVDJ4VkZ4c0FmV2tWbU1LTURlakVUOWRwX0FTYXJveVVPay1sVQ?oc=5"
-    },
-    {
-      "name": "From pubs to pavements, Pune city makes fitness more accessible - The ",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSldZeXMzamRlYmNxNXNyOFZONzN0MnhoWG1DeWc0VUZZYzFLdG5ZeEVlU3FHQjRpQWlwY2lDdHVscFFDWi1uaG5LTlFGaFJXYXo5akh1UWhfMzdGR244X3AzOGhGVnl6MWRCa1JFLW41OW0yOHRQN0M4eTVJMGpPRG9nVWVXbDY2eFlWWUl1ZnlfMGQxRFcyS2Z2ZEh5empoRVZjTUxNRFlseWhZUWhEWHNhbnprNzRFR2VkdFpHNUt2UHZpOE1SeGp2LUE4OWPSAdQBQVVfeXFMTmRxSjNnd2s1bHpBY2dJYzN3YnlkWW83LUhzRXJDZzBWemtBbGVpSVVxZUFycDEwYWRmb0dKMjlxNHF5Q2dIQ290UHQ5eVRISDRva205YWNTekpjVFdBX1JudDktandkb09wOUhBdFRFSXZvaTR6SDRNbjNQTVJOb0dMdzFJNVRwX3pvY0ZDdVdGbmd3MnNxbi1EcmltTVpiUU5qVnNDa0dPZ0J1LXlXSkk5bVhPQ0UxZFhJOUJPSEV3WTJ0NmpQSmtybG82T25iMTl2Unk?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZS1tVjdZMW9iOHZCWExkck80SU01RWcxZTc3YlA1N0JXbk1kXzFINE9MUmR5VG1BZXpJU2FFN0pwdlNORndITmV6akdDQk9PNWhsdUJQSTZ1MEVFQ1RYSm4xZGp3Yjh4dU5fdXp2RkUtREpnYjFGZGcyTXFTbjhPazJ3bk9ZQkpsblZwTnh0czVLZ0d3RVdZRmZJRy1uS1VuOEZmV1lIV3F2ckY4TUhsaENVajVOcjhP?oc=5"
     },
     {
       "name": "Shapoorji Pallonji launches 25 acres residential community in Pune - C",
@@ -427,18 +415,18 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOekVOVDkxTVFUTXRxT055NDRZRXlSbTZTbDVwUmtWNWs1ZnNxODZreXAwN0Y4V0ZnYnJuWDM0YVNKWGtTaWlEY3ZMODhpOV9Jc0pSemZCNng1LTlUWFp6RW00Q0NXRXc5SmVVQUN3a2ZFc3dUM0lMQXA0X1J5cmFvWHRHSVdrRERsU3dQYUMyTG9xYlRCOG1vRnZQUFJiUTNvWlQzdHd2WjliSjltd0E?oc=5"
     },
     {
-      "name": "Gera Avive Towers",
-      "reason": "outside Pune",
-      "detail": "no Pune reference in the item",
+      "name": "From pubs to pavements, Pune city makes fitness more accessible - The ",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQY1NrZnEybUZsSWZmQTdURFBMa3puTkFTV1Izcno4X2lqdUxaQ1VZVUJ5UFhTQzcyQVFpVFJBblczMjRJX0RudWYwa1p5UlJIajlIZ2JaOThCVEhKb0gtMnVXX1hJQ1Nkb0hHUlZ3SkxlNGthY1JqNXFHc0dkODFMUnhrcGFFUFZIU3ZXVldwVVk3ZGNYRmV5anMzajhCbEdNamFMS0p3bGVPRGZQVEs0cFJzNlBGeXZZNTBoT0hBdzIwWE9kRlNUY0ZBM2ZkZFl4clYyeXE4LUVudS1xMWlfcElCMmhVcFdVOGJacWt0RXVIVmlXekF1THhzM1JOTk1PSk9wcEU3Zw?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSldZeXMzamRlYmNxNXNyOFZONzN0MnhoWG1DeWc0VUZZYzFLdG5ZeEVlU3FHQjRpQWlwY2lDdHVscFFDWi1uaG5LTlFGaFJXYXo5akh1UWhfMzdGR244X3AzOGhGVnl6MWRCa1JFLW41OW0yOHRQN0M4eTVJMGpPRG9nVWVXbDY2eFlWWUl1ZnlfMGQxRFcyS2Z2ZEh5empoRVZjTUxNRFlseWhZUWhEWHNhbnprNzRFR2VkdFpHNUt2UHZpOE1SeGp2LUE4OWPSAdQBQVVfeXFMTmRxSjNnd2s1bHpBY2dJYzN3YnlkWW83LUhzRXJDZzBWemtBbGVpSVVxZUFycDEwYWRmb0dKMjlxNHF5Q2dIQ290UHQ5eVRISDRva205YWNTekpjVFdBX1JudDktandkb09wOUhBdFRFSXZvaTR6SDRNbjNQTVJOb0dMdzFJNVRwX3pvY0ZDdVdGbmd3MnNxbi1EcmltTVpiUU5qVnNDa0dPZ0J1LXlXSkk5bVhPQ0UxZFhJOUJPSEV3WTJ0NmpQSmtybG82T25iMTl2Unk?oc=5"
     },
     {
-      "name": "The Fern Hotels Launches The Fern Habitat Pune, Mundhwa, Series by Mar",
-      "reason": "not a fitness business",
-      "detail": "no gym or fitness language in the item",
+      "name": "Residents swap morning runs for indoor workouts as AQI worsens - The T",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWDlTczBhQkFLNDhCdTg1RUZMbDRWMGNkWTlxNHZrYWdUbHk2am8wYnR3ak1reENidW0wcFhDVXBWVC1KX0xlcWtiWGZsYXZHUDI5dkpwaTQ0andPdk1SWm9DSkxrVzJpTFVDLXctUlVDVVhRa2dQX2w2eXc3WndNVk9aRHRHeUdNbEQ4X0tMS2xWTnZJR0dOYkU4VUVTTHJU?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbi1pWEU0ejUxTllrWHFnZ2hZRFFWLVRMMzBHN25vejg3QlhSN2ZVSkkwQ0FmRVl3aGhDZnRnWXB6X1lHVzM0ZHViRkl5bHYybTBKR1B5Y3RzcFVHeEMtU0lxVUpXY1l2eV9fa0J4TkJTRDlDYVhsY2Z1ZzZWcmdSTndNVnN5Q290OHYtV0s3T245N28tNl9ic1h3YnB0VktaYjFlaXR3Q3lydDRMSmZSX1pMUDdwX0k5Q3hqb05nT1N0OTBWaVplVkRqWGw2d0HSAdQBQVVfeXFMTWI0Nkw5eUxnYU9EWE5KMVl4cVBFM0tpcDFqc0JKTXVGZkpJN1lWcHdhemFXR1lJcmI1ZGhKMkFQTzFSSDE5b2MxTXN1bHdNSm1PM3dyeDhkX2lJNmc4YjNqYmhSUDV1N09FbnYzVE80LTkxQ3BaSWxXck1qOEVtUldzYTFTbFZHS3RSeXhtOXY0dFp1YTRiSTI0ZFE5Q1loTHNxOGJDc2wzazdTaE0zNncwMVF1bWpTNTI4YW5XeGR0ZUhPZ29sUTZCd1pEMEg0OTJVWUQ?oc=5"
     },
     {
       "name": "EXCLUSIVE: Women Gym Built Under Smart City Mission In Pune Baner Hand",
@@ -448,41 +436,6 @@
       "url": "https://www.freepressjournal.in/pune/exclusive-womens-gym-built-under-smart-city-mission-in-punes-baner-handed-over-to-private-company-residents-slam-pmc-photos"
     },
     {
-      "name": "Suniel Shetty",
-      "reason": "duplicate",
-      "detail": "same story as Suniel Shetty, already carried by Google News",
-      "source": "aninews.in",
-      "url": "https://www.aninews.in/news/business/suniel-shetty-inaugurates-tungsten-fitness-club8217s-flagship-pune-centre-in-wanowrie20261021152746/"
-    },
-    {
-      "name": "‘Some milestones are worth far more than numbers’: Pune CEO celebrates",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQMXNfc1BCV0pHQVZvVm5SZjBDVnk2SWVORTBvUW1jS2prVHVDZlVqakZ4cXdTdGZMZEFDSGdOdUxEamtwRmUzWS1oSTZDMFhQUW9fNmhZSWwwcjNhRTVPeTlrYmRwemVqVzFFVi01LTU2VmFLcmxBMFRVeVRSYTBtZEQ5LVVvZjRKSEwwZThlVU1XMndJd2tNbXpGR2hEYnNndnJ3STlMemRPakRkXzNOMEtzamJ3STliNzQ5RUtQeTUtWExTbTVOZGEtdlk3TXByaTdYal9obk0xNE1DSnhZeHY2elNMS2RzSFJvaXZDamtlM3dkcDFhZldZV0pMNHpCSHpaV0gyVGpDTkRsWVVwYjZpQUxBRmVnX0pjS0g4cXllRm1EbENVRE930gGvAkFVX3lxTE82ZGdQb0dtWXdMTTBVeGliU0Q3cGR1UDA2SG1NQWQ1dUJBSnZteThNQllsVXZpYnN1SkJnN2lpa2c2RFU0MUJPVmFRTnJnVHd2X2xIVTZudHZ4YWxobWV5RFBIMEhZUjAtNlJUeGF6M015b0xLUFZxbWc1WVBIVkpldXBkdjJjZWRuQ09MMmZTLUNRQk1ubVJheVM5UjdCaHlBZGFSa19MdDBTOXI1akczcGt4QjB5VWZSZnh4dG53eWNOZWdtWjFDNUU2R0lHS3hUS2g4RXZQbGQ0Z3FvN1ZlRGY5VlNBZXpQNkp6QUJuTjFfYWdHVWRlYjJEUnRBNmllM2gwWFRYbE1BdGRxVTVtaDU0ZDNKOTRIbFlYQ3dVUFBjamZ3MS1XY1pFcUtUcw?oc=5"
-    },
-    {
-      "name": "Indo-Asian News Service - IANS",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOV2ZiZEFGOVl3dHNQd1ltVjFHaXVVZHVEdkExQllQc0hvdTV0YXBKY1dvUGUtM3hMelJTenBTTWlkTktFN015a1pUbHR3OVRKaVM0LVc4THNkOUxoWjhwdTQ1NF9YZUVFU1V2UWN6a2dhdFhLeGdoaklEeG0ya19MZ0d1M0Y0b2FkbV9jSXBhbkdJUHd0UVRFcmZGa1hGX0t1S1gtVzBWcUVQZFpLdndRNUp5a3ZuWFNHOEN6X2ZMUGd1ek14SjRuaWdvbTN3V3pDWm9R?oc=5"
-    },
-    {
-      "name": "Punjab govt launches 500 gyms across Punjab villages to promote youth ",
-      "reason": "institutional, not a private gym",
-      "detail": "public body, school, hospital or sports authority",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYWlXYTJKay1HNFUtYXhfaHlEVlRfbmlFcUJmRXpHWnZmTjk1YzhvdFJkeFNVWkM4ZV9rWWZ0SFdJOG9yejFhbkpUZ25YSGdaWThuSjBuS2hpbnlzcm44OFNNLVVPbnlVXzlhNzliR2l1QVpXMnFFcHU0N0pDN2N2SU5fQVBFWWtPdF9FMXVaWFh6SnZMZGtLb2lkX3l3dFpxcFhSVWtQTndvbVhyd29wc0NtQk92X1NjSUZMWlVzcVpSX1HSAcgBQVVfeXFMTlk4anl2VHJJaFowNjZUcVFsS3JYTmdSaFBuU3ZIWVB5Z3FiSXQ1bzJmbzZkYWtVNnI1RkMxMU1NZzE1Nko5X0R6YUx2OVlCNUN1LTdGTUUtTWJFVF9keXRTbnRZVkNCdEgtZE5ZLURjR1NSREpwMncwbkhiRXQyRlVtcXVHeFVLbWpFMlVObkEzb2FMVk9GVmRDQTVfVGgwRzI5MmZSMHFXUV9kSDlVaVZjZ3plWDkzNTdvdjNWREkzbzVxMGw2eEs?oc=5"
-    },
-    {
-      "name": "House of Malaka Spice launches new cocktail bar in Pune - Food & Bever",
-      "reason": "not a fitness business",
-      "detail": "no gym or fitness language in the item",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdEFZTXYxcjZ4T0NsajNhUU1hcFM3THAzMkRNMk81RUNvYW91VWhqSGhZdEpuOU1YMnhvb0Nvbm1QenZHUWRhMjMycUUwelltd2Q0M3d4TWRtLXN3Z1hCRDZuaHFXMUNKSjNEbkRVR3Juemc4ZWZaOWRkNTlUZWh0M2dxMTNlZGhvQ0x2dlRBOFhUdEkyMy1kc01n?oc=5"
-    },
-    {
       "name": "UFC GYM",
       "reason": "outside Pune",
       "detail": "no Pune reference in the item",
@@ -490,18 +443,39 @@
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZHNkbUVJbTdfSlgwSE9MaUc1a1luZm9IRHQ5cjk4QThvLV9xa1k3b2lleTdNWDVwZm93WjZMQWJUdUdkTG4yOXRnRDZDSnFCcmVja3RFcDVUZ3VUZV92dHlFTTVGRGRHcW9LRVhBRjdwN2kyZ2hVVzU2NGJRZ2x1TTlCZTYxdlZVLS1rZGMyaXZjX21RdjhiN3ZydlhKbFd3MnBiU1ctNFBEMTFWajd1dUxrZFdFUWI4RnBVblhvODlhVzFuWGRhM3Z1X2xfZWt2LXEwS2FSVQ?oc=5"
     },
     {
+      "name": "Forget treadmill and strict dieting: Pune fitness coach shares fat los",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNaGFIWnFqWjNVRjZ3eVVueFhONk9YRm1MTTRaZXBOLVh0SzNUQlFpMkZTSzVJa3lFQTlwODNUNnRuQ005a1M4ZktFdnlWTmVkSDJOT2lXWFJSNjdBSWRHa0JWRkxFTmtJQ0V2cjlNZm9oYTN1dm43cGxhVHppSnI1SFZMWF92eDJ5ZG5BeDBoVkx0NXN0REVnazVFM21Dal9TQTUxdno4NDlUUGw4bmtlUnFYTWxjYTU1Y2VNamlnTnVCZ2ZHYzFhZnpKSkFjNVN5aDhVSXRxa0hLVFpFS2tIZjRtMU56Zm9pVTNrcTEwNS14QWwwbHl4UVFCTUVqMy04em5od005bGhndjdMLXBidy1B0gGXAkFVX3lxTE5NbU5ENUxNenlpOTJSLXlwUXdxYi1vblBrbEEtZkhXN0VxVEhrOTZoQ0hWbEdITDQwOWhLV1dDVXRGMXlsT1NNMkRtSElrSi1uT0FxVzhjaTgxeUxrNkRHa2ZRa25HeHp5eWNyT3FPdVI1dXBPcUwxMDVHVWRvbk41bEtpcDZxTFhMV2ozRFNKNUdYeldKN1B6MWFVelFzenI5TTFyWWpEU0ZFSVdWcTBkUGJ3elJpVk1UX3dSV3JZcklkTkhhcFkyb19sajNrVVJsMDliQVBPVDAxcnRVVldBd3BSLWZ6dTdsTi0xSm9heUhhVDJ4VkZ4c0FmV2tWbU1LTURlakVUOWRwX0FTYXJveVVPay1sVQ?oc=5"
+    },
+    {
+      "name": "Shapoorji Pallonji Real Estate Bets Big on Pune, Launches Third Reside",
+      "reason": "not a fitness business",
+      "detail": "no gym or fitness language in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZGNER3NmQXpaWHFsZ1E1eHNwNVJFd3RuY0Q5Nlp2Sk1JR0N1c01sYmotdWxGTTFlYkloWHVycU83Q1BYejljenQ4NlNCNUprbDVVZHFpdGtadlR2NzRHbTNZNTVzNUw3YUpFTUQ0WUtkUlFTaHNGZk5nYzhWbmxLT3VxNGJMLWJmNGtGX3NDWjk3UXZIOFFjRllvRjNiX3h6bkx3V0xTbmhzUXZaNjZRb3B5LXJUTTVnZTBhQ0VUR1lEVGZrcWRfSEtsdkZiVTdWRGpwUnNoM19WTG_SAeABQVVfeXFMUF9EN3RCdENvczRIQWxCNU1xTDhpNEVpSThWTDBqMFh4RkVIekVKbk03YnQ0QUZuWlZTX29ZbGRrd1VuWkk3cXFqT281Mngyc3ZUbElDaElGVUdUR3ROako0RGp3TEhEQlhDSzVUc3RhWFBlRTJUZ0hkbk9HMElVNmhsakZaUFRCVVFicjlxUkEyVmdLLUZseUw5WGcweHczNGdqQTRoU0Z2Y2lDTEpLWF9uSlJseW5fY2Nwb2RHQUVncU5NS1owTFNKZEdwUkoyZDdmYmYwNTcwcGQ5LWdDT0o?oc=5"
+    },
+    {
+      "name": "Google Fitbit Air: Everything we know about the screenless fitness tra",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZFpzQWNNZE8wSkJ0QnZ5UDQwRDZmUUFCMjRyMkVoSlU4TjBQaFR0X2hYSEp4cGVZVTc3bjUzWlh1OHdEa3dpWlJMd09NV0FrOXdoTnVTb0M5YUlUWUZsLVZncTBPWXhNZzNnOVRLR1VpZFBmVjlFTmM0SEF3dGtjWHJWQzB6dG5oU0ZncDNSWWVDV29wZTNHZUNGSFkzWXhidnU4b2Y3WTZvTzQ3dE9OZE0tSGlxdWo4RHU5ZDVEMEhKQVdfSHZ2eFMzMmU3dzVxYlHSAdgBQVVfeXFMTjgwNWRfcGQ4b1hnNVNRSkN2eDJoeV9kRjZkaTZmS1lqM2hscUZvbGlnRnhBYVZCcWc3c1ZkTGFVWXlpcUgtOUs5RlZiQVdSRFZKSXViOEpfRTRFcmJWMWNRZ2NwOE84dGFuMEMtaFFsalpQU0JGLWxFMmVCR2lzeVB6eEdjNzVEMHJMT0U0U1VENzV1ZDY4b0kyWFY5Wm9wWHczU0ItaHNXeE9NRlc0MkduQVJZRm0yS3NNX3dDdjNNSVhZLWxYWWJoUVU3OXdxbkpuUU9veWpl?oc=5"
+    },
+    {
+      "name": "The Fern Hotels & Resorts opens hotel in Mundhwa, Pune - ET Hospitalit",
+      "reason": "not a fitness business",
+      "detail": "no gym or fitness language in the item",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSTRwWlZjM3hJdGNiZGVZSGV4R2NZdm9UaF9Dd0FXbVNKNU1YaHI0dy1KX0hiVVRJdjg0aTVrNWViR1ZFRVozUWh5aEtYMW5Ob1RvV1lHMm41bnM1d1RLVi1nT0NzZ1dkbXZCZEpGNkZjMS1LX3RrWUp2QmVib2Q3X1pTYmEyelVBS3dJUU94eEpfTkUwZkxEdDFUZzY0ZWU1REFvYzBmMVdHZXZ5R0ZRMUJ4LWFXd1ZUXzFEXy1n0gHDAUFVX3lxTE5uRkFpenctcHdZeUJGVVdDLWd0OEJJV0drVTJvM3FMSWdPX3RLMHhRUjR4Ri1LYUFONGlvSC1kd21zSDFlMjJKQkhvV1BQT3Jvb2IzeEtNTURWaUgxdFB5bFdjNlI4S1pSVkhvTlc0Q0lCcE9jR25valhvS1hKWld2VzNvQWNtMEotQnlmYTlpOWxvWW4xckFfWi1UOE1EME5HYkNtR25PWHJsWkd0Z3VMVktzTEtYa2hCY0xxZEJpRnM3bw?oc=5"
+    },
+    {
       "name": "Suniel Shetty",
       "reason": "duplicate",
       "detail": "same story as Suniel Shetty, already carried by Google News",
       "source": "tribuneindia.com",
       "url": "https://www.tribuneindia.com/news/business/suniel-shetty-inaugurates-tungsten-fitness-clubs-flagship-pune-centre-in-wanowrie/"
-    },
-    {
-      "name": "In wellness push, Pune Municipal Corporation hunts for spots to set up",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "timesofindia.indiatimes.com",
-      "url": "https://timesofindia.indiatimes.com/city/pune/in-wellness-push-pune-municipal-corporation-hunts-for-spots-to-set-up-health-centres-in-merged-villages/articleshow/95412878.cms"
     },
     {
       "name": "Why fitness clubs are becoming the new anchor assets in real estate - ",
@@ -515,28 +489,21 @@
       "reason": "outside Pune",
       "detail": "no Pune reference in the item",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQTFBaGhpdnEySXNXaC1zRWVjYVBsQndKQVRSWWxJQWlwbzVJenZXaE9sUFd3T1lzUjcyb1pBdFlxbzYtUC1wUUQ5TTl2TFN4cTF0LUplQVlOaWM1ZWlGZjZZRzRIRUY0dFlCQXpsQlN3Qm1QMVJaQl9TVFdycS1kekdVdElJYU5QOWVLRkhxRWkzUnlPX3ozNzktWXlTVGc?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQOHdqaDBtbVVTc2lWTmxac0k3d3AtUllJTHRWd25DMFhTdWtMdVQxZkRnZkdGNlVndF9qRWJnd0xsdzJvVWdqTnRUR29QRmJZb240Q3d4QXlYT1gyeHF3ZXMzbUhqdGNpQ1k1akI1cm5PSFhadmlSTU9BS2VLYlFiRzJ0Z212bEVIck52Nk9DWFdoVVNrc2R4SS04aGd3Q241a3YyUTVpUzZiRHhqMkRqWm1rdG5WUkMwR1pJT3BsRkpJaXV4dU04RkdfOF9HY0JqSzJJWG54R3lob21oMDRNSklCSkJHODFP0gHuAUFVX3lxTE9xSlRXeVdiLTZBUURLUHRSV3liTEdTRTJGVnVmUW5jNHMzSlRBcm1HWERMVDY1N0dVcE05WENlSkhXZWZuNVhtUnRuYXdLNGtFSExwWGZkblNFRHZzMXlvQks1RXNKZDFMLVYyQkxHZXZReGlkZ0Jkb25uYU1ZaUVKcGZndWdsNFN6TGhIbHVvVjkzS1BkWkF5U2xFOGN3a1pzS2N5T3h5eUkwRjdtbVNlOFR1NGoycjE2M0hpUllKLUFMN2Fjc2NvSnU1U0JFc0hmeHZIWFpNZmw4TkpyLTY3QThVWDVBUTFNLWd3R3c?oc=5"
     },
     {
-      "name": "Atmantan Wellness Centre - Time Out Worldwide",
+      "name": "Jerai Fitness Opens 16th Showroom and Experience Centre in Mumbai Andh",
+      "reason": "vendor, not a gym",
+      "detail": "this sells equipment or runs a store, it does not buy gym services",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQ2h1NmtTUlZFMzYtMHo2UWtEdS1nc1o4X1VWOUIxejhiTDhoWTQ5cDMtVjF6TzFrX1BENXN3aDlfM3NVaUxqbUl5elE4SkF1ektoT21LQWMzNXY5X0hZOFJXcWM1NXktNFFSQ21jdVNfSDVSZlpPN3FNb3BVMlNXX1VWUnB6c25MaWJFRmctQnVYMUdVaWxiRUhWTkFHUWVBSlp1NkZ0emZ5VGM3?oc=5"
+    },
+    {
+      "name": "Gym to Jihad: Over 22 cases since 2019 expose how fitness centres beca",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5CWmlodGxQOS1qSDhwNlBxNEEycTZVakViMDRaeWtJcW1CaHp1Mk9TT3BPb2lWY3lRUDF6TlRpYW1MUUJSSTh2bHRQX3BfZncxLTc5Q3hLNXNUYmE0ZHZPMWdqZ3JTWmItQWJkUjhB?oc=5"
-    },
-    {
-      "name": "Faith meets fitness: The Keralam church where prayers come with pull-u",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOc0QtbWdRcFpMWlR2QVlSalZOa2Q2Z0NZeUdKbVBEYldQc0c3Wi1VNVBHVVpGdktvM2VWTm54NmtkMThaSVZYaGpUVTBBUzV2ejczUEVqYTZYbk4zRTVsTklSWGdRVnhwWUREZkFLTFA2TXFaTFYzaHR3c3NVb1JJdHNZYS1tOGpRbVJNOVJsS09RZXU1Q0RnVXdGbFhyV2VmdUJvcFBuRlVoYUVVM2s4Ql92ZHhiRU9RQ1lLcjBnSHJpT0Rka1R3b0RfWEREN3UxUHFlOTV2Z0dhQdIB2gFBVV95cUxOc0QtbWdRcFpMWlR2QVlSalZOa2Q2Z0NZeUdKbVBEYldQc0c3Wi1VNVBHVVpGdktvM2VWTm54NmtkMThaSVZYaGpUVTBBUzV2ejczUEVqYTZYbk4zRTVsTklSWGdRVnhwWUREZkFLTFA2TXFaTFYzaHR3c3NVb1JJdHNZYS1tOGpRbVJNOVJsS09RZXU1Q0RnVXdGbFhyV2VmdUJvcFBuRlVoYUVVM2s4Ql92ZHhiRU9RQ1lLcjBnSHJpT0Rka1R3b0RfWEREN3UxUHFlOTV2Z0dhQQ?oc=5"
-    },
-    {
-      "name": "Ihcl",
-      "reason": "outside Pune",
-      "detail": "no Pune reference in the item",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMEM5cXlTOVl3NUVNT1VPbXZWSFBLQTFWX2dYNUtWd3AwSl9oZmlHcWlDQk1BckhuMjdKRGNyT05jcTJjeGZpVzdKX0M0QWNxR0Vsa0RIUDBoVl9LMW9sMGdNd3Jma2tBbDNPX1V6N1d5OEY2cmhDN25XT3ktcTlIcWxkR05LOHB2REI3X2FwWjdfbnUycUJud28zR2hiYlM2LVdGaDVuYnZFbElRbTI3a0tIbEhpWVpnRWg1bGcwbHBjc2VvSmFNM0prRzlRWW9V?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOV3NGX3pGMGVaZGd2UDNOTEt1NkRraEhSMkFjaDVxdGFCWk5ya05nU0M3aVNTRGdRaEJ6NER0a2ZNdktkYy0wMTFFbmFHQWJqOEtWZ0Y3SUhVMEZNWUZyT2hVUko0cEw0WERpNUx4RjczazN5NFdpaHRlVkFjbklha1RJb0I2V3lRTG1maDNPNnozekNERkxtSXRDbXBQTjlLUmkxcWtuX3JsS2FBMVV5UEc2cDVmeEVyb19Ba3B1VGk5djdkczNEdWtlcU5CUUV3ay04MlhxR3jSAd4BQVVfeXFMUGVISmJkcEVaSFBQeVpUUWx4djBibmN0d2Y1SThjME1ZV2x2b01qQjVyVnFVaVR6N3lpYmIwT2dJWWt1ZGFJQ3JYMEVOellyT1F5SDRUbVpvUExObFdSNXdaak43aXlzanhmMTlybWM3VHBjT2ZrWmViY2owR1Z3RnVEWTZmanI4REMzV25lVHBRaGNyTDl3SG5lWnM3WWJ3R1NjaHZlV055OWZQTEYyeDBxRjhDejdISzkzUmdpY3B5UHRoanMwdi1lVlNlRGhOSWlWY2k5Z0xPYTM0Mm1R?oc=5"
     },
     {
       "name": "Retail India News: Vault by Virat Kohli Opens New Fitness Club in Pani",
@@ -546,75 +513,96 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNblcxWmlvZW1LaS1CelN2dkxxMHVlRVdSS2FQSUNaTW5pOUxzOVZHTXE3S0tnaE5DSGM4SmF2R1B4Sk9IbGtUcWZldmRLLTJ2d0VZdmtKRDhiS3J1YVBKSndvdVA2MFpYaDlfcS1vT2JBdjRDOFJLNjUwamJqUEc5MEJGMmI1M0djUV9sLV85MGozak8yQjlTQ2lZbnlOOGdhWkt6Tw?oc=5"
     },
     {
-      "name": "Two Knife Attacks Reported In Pune During Diwali, Six Arrested",
+      "name": "Fitness centres or conversion trap? UP police reveal ‘gym jihad’ modus",
+      "reason": "not a business event",
+      "detail": "crime or accident report",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeTRiZmN3ZXc4R2xLdUtMVk9vckJNakNrMnlvUk05WmZzTXY1MnJmS1dvZF9CY3FsRXYxc25xOXRZb0wtSUVacWpEbldrOVV6UHZORUt0NHdZTkdKQkxtQi02Y3RIblQ1Vk16Sy1NQ0U1QXo5TmhrZU82UzF5UGZZN2J1SGxHdWowVzdtMmVIY2hiMEZYVUdfSVVQSWVwbmNhUzVVdENab3lmLVN5TnUyYzVwckdHQ1nSAbwBQVVfeXFMTzRnYlczbXViSlhjOUZ0cXhSQU9qYTFQSHVCOFZLbVp5SDdSczdzVklKWHliUW9zdUtiTmZFZVhGeEpHVzUyOU00dlJPcUdIcmxPWWJEbWRTaU1oVHNNQ0ZuYU05Sy1pRk55aHcybGZhVkIwMjRFSGlDcGpxa0o5dWNkaDZfcFlhR0Z3Z1JTSzdoaVJhTVpoWFhoY3JRRFlZRXBqaGpzSXFyWXRHbl9tZkFPRGh6eXZ1X3VCcWk?oc=5"
+    },
+    {
+      "name": "Marriott International signs agreement with Vedant Enterprises for sou",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOb3JHaFQ3cVRNc1hJdUxMSkc0VklMSF9RWXF0U0d0SWtrWHRIdUlaM3BWRDlTR0Q0LWcwdWZwazdsWElOQlRXRzFDUDNreGNtOE9rU0wzUlhpQlBaZlVUdUVGREo0VzZEajNPa0JhdlZKVG9RbGtVUmZvMWdnUFlnbk9tNXJRMHMwdWNtX0FhNlFNYzFDcWh4YTNQUmMzVDZBT0hOMnY2OEFNUGJTNngyNWZULXYzcXFGeEpCNmo4M0w4emZ4MnlHc1UxbGpSbU04UzE1VTA2UC0wYl9WSUFYMzhCdDltSXh2YmIxcGo5LU1lekp6dmlHc0ZGNXJlOURHWEE1VXRpeHJZZmN2WFdMVjBvY0FTNVQ4cDgtUnl6SXNVN1hUcUVLTNIBrAJBVV95cUxPY1QyTGlEMUFzSk5WVWlTc2g0Q1pmNGRZYUxCeXZqS2NtNm0xb2J2NkVBLVlBdUxDc0IwbkFkdDFSeUdPeXZGRXlBSVozUzVlYk9jTTVCUFI2STZZTGYxRmM4RzVjQ0daTDVsUzN5WnRxZE0teFU4Z0tReG4zV3J6em1TNjNMYXh4UGQzTC1GMThOMkhYbGNnQjBOb2JkYUZJUS1VdE5jNndodmNUVkpablc4RGtRVUY0aEJaTUtmVmswWU82Yy03TFlDd3MwUk1mWk1TR1FrX3RLVDhoazBUMll6RVhEbXJPdGU3RWEzWEI2dU80bzNKM0l3YXBNeFQ5eUtucmFPS2tMbUNaMHJjMFJzLTE0TkNiZ1pkNUE1MUpNZUh1THQtdUoybUo?oc=5"
+    },
+    {
+      "name": "Gym told members paying Rs 15,000 can train at any branch, denied acce",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNZ2g1TnlRVDM5eUtkLURKUjdJcGllOWlJQlpFUEZESVBjVjd0RmNrQlVJUFhHeHhfMTdiUmtER1J6cmprcVF2SEFMYlc2eS1zcVdCNmJkRUNTRTZ1NzViWGQtTmhZRWhRYmw2aWVZdTAxVDRkQm0zMDh5dEJkYk9FUHNKRUpRNkI0WGdJNUtHdXJIcVhTTFIwX3pZN29sRWtPUGE2SUxBWjVJdWZOSHNDMEY4bk95clpxY1BlR1U4V1NnMDU2aHduZ2F5UDRQSzhoY3I1Uy1nNjMzaTN2WUYycXNpRVpUSnhTTWllUTY2a0xQcWJLRzZad25BOVd0OFlhcnhZTFZDTkVtVWJyM096MFl0dTJkbDA3Y3ZNSWN3TmotWUlUbmstbFV30gGvAkFVX3lxTE5TbnFFck5fLUVnbXhMM1Q0QUJjZmRObFh3UUNYMVZHR1dkdTAxRFBTT2pjbWxNZnhDWGlQeEgwRTByUUxvWW1OUXZtVkpGSlhJRzdMOGxJUHMtQ3Vpb2ZuY09tZmhFSnVOdXkyc3paaURuaklScEtRLVRONEtGYVRFMHZYS3hlbGFyTTZZNU5XRklPUDFiVGl5MnJBNHh4eTdieENObTcwbkNzcTh5Yi1jcHh6aW5aQWJUcFlIMkhQeDcxTzREMVd6cjRIUnh4MW55eGlfdWJZRjY2T0ZvaXZaT0Ntd1JRZ3JUMFhrU0dOdm92N09OVURwbXpHTS1FQjFkbFBjckR2TS10RUVzS3VxaEY3WFBxTTcyT01LVXdKVFM2cnZWek00azlYTUR6TQ?oc=5"
+    },
+    {
+      "name": "No Interviews, No Donations, No Screening: Maharashtra Cracks Down on ",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/news/no-interviews-no-donations-no-screening-maharashtra-cracks-down-on-school-admission-irregularities/"
+    },
+    {
+      "name": "Bharati Vidyapeeth Rabindranath Tagore School of Excellence, Pune: A P",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/pune-guides/educations/pune-schools/bharati-vidyapeeth-rabindranath-tagore-school-of-excellence-pune-school-intelligence/"
+    },
+    {
+      "name": "28 Best Makeup Products to Try in 2026: Foundations, Concealers, Blush",
+      "reason": "no event",
+      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
+      "source": "Pune Mirror",
+      "url": "https://punemirror.com/lifestyle/28-best-makeup-products-to-try-in-2026-foundations-concealers-blushes-powders-and-mascaras/"
+    },
+    {
+      "name": "Two Killed in Separate Accidents on Pune-Panshet Road; 13-Year-Old Boy",
       "reason": "not a business event",
       "detail": "crime or accident report",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/pune/pune-diwali-attacks-kondhwa-yerawada-six-arrested/"
+      "url": "https://punemirror.com/news/two-killed-in-separate-accidents-on-pune-panshet-road-13-year-old-boy-among-the-dead/"
     },
     {
-      "name": "Khopoli Road Repairs During Diwali Put Missing Link Traffic Under Part",
+      "name": "Suryadatta National School, Pune: A Parent Guide to the CBSE School in",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/news/khopoli-road-repairs-mumbai-pune-expressway-missing-link/"
+      "url": "https://punemirror.com/pune-guides/educations/pune-schools/suryadatta-national-school-pune-a-parents-guide-to-the-cbse-school-in-bavdhan/"
     },
     {
-      "name": "Unidentified Man Body Found In Chikhali Bushes, Police Probe Death",
-      "reason": "not a business event",
-      "detail": "crime or accident report",
-      "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/unidentified-man-body-found-chikhali-pimpri-chinchwad/"
-    },
-    {
-      "name": "Mumbai–Pune Travel Time May Drop By Up To 90 Minutes With New Elevated",
+      "name": "10 Red Flags Every Pune Home Buyer Should Know Before Buying a Propert",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/mumbai-pune-travel-time-elevated-connector-atal-setu-expressway/"
+      "url": "https://punemirror.com/pune-guides/real-estate/pune-property-guides/red-flags-pune-home-buyers-before-buying-property/"
     },
     {
-      "name": "Xiaomi 17T Review: A Well-Rounded Smartphone?",
+      "name": "Amit Shah Visits Bharatiya Pune Jain Sanghatana Office, Reviews Its So",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/technology/xiaomi-17t-review-a-well-rounded-smartphone/"
+      "url": "https://punemirror.com/news/amit-shah-visits-bharatiya-pune-jain-sanghatana-office-reviews-its-social-initiatives/"
     },
     {
-      "name": "Ganesh Marne Denied Entry Into Pune As Court Cites Witness Safety And ",
-      "reason": "not a business event",
-      "detail": "crime or accident report",
+      "name": "Maharashtra Has Become Orphaned Without Dada, says Sunetra Pawar at Aj",
+      "reason": "not a fitness business",
+      "detail": "no gym or fitness language in the item",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/news/ganesh-marne-pune-entry-plea-rejected-sharad-mohol-murder-case/"
+      "url": "https://punemirror.com/news/maharashtra-has-become-orphaned-without-dada-says-sunetra-pawar-at-ajit-pawar-statue-unveiling-in-pune/"
     },
     {
-      "name": "State approves Rs 9.76-crore proposal for transgender toilets at ST bu",
+      "name": "How to Check the Possession Date and Builder Extensions on MahaRERA Be",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/pune/maharashtra-transgender-toilets-st-bus-stations-approval/"
+      "url": "https://punemirror.com/pune-guides/real-estate/pune-property-guides/check-possession-date-builder-extension-maharera-copy-url-slug/"
     },
     {
-      "name": "Special trains between Pune, Danapur and Gorakhpur",
+      "name": "28 Key Registration Posts Vacant, 23 Still Without Officers; Maharasht",
       "reason": "no event",
       "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
       "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/pune/pune-danapur-hadapsar-gorakhpur-special-trains-november-2026/"
-    },
-    {
-      "name": "Pune Spends ₹275 Crore On Clean Air Measures, But Pollution Levels Con",
-      "reason": "no event",
-      "detail": "headline does not describe an opening, expansion, hire, funding or partnership",
-      "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/pune/pune-air-pollution-275-crore-clean-air-spending-mist-fountains-fog-cannons/"
-    },
-    {
-      "name": "Six Of Karanje Family Die In Yedshi House Fire, Girl Student Had Come ",
-      "reason": "not a business event",
-      "detail": "crime or accident report",
-      "source": "Pune Mirror",
-      "url": "https://punemirror.com/city/pune/yedshi-dharashiv-house-fire-six-family-members-die-karande/"
+      "url": "https://punemirror.com/maharashtra/28-key-registration-posts-vacant-23-still-without-officers-maharashtra-governments-staffing-order-stuck-on-paper/"
     }
   ],
-  "ms": 60957
+  "ms": 36367
 }
